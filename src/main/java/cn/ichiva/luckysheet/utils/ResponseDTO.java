@@ -25,20 +25,22 @@ public class ResponseDTO implements Serializable {
     private String data;
 
 
-    public static ResponseDTO success(String id,String username,String data) {
-        return new ResponseDTO(1,id,username, data);
+    public static ResponseDTO success(String id, String username, String data) {
+        return new ResponseDTO(1, id, username, data);
     }
 
-    public static ResponseDTO update(String id,String username,String data) {
-        return new ResponseDTO(2,id,username, data);
+    public static ResponseDTO update(String id, String username, String data) {
+        return new ResponseDTO(2, id, username, data);
     }
 
-    public static ResponseDTO mv(String id,String username,String data) {
-        return new ResponseDTO(3,id,username, data);
+    public static ResponseDTO mv(String id, String username, String data) {
+        return new ResponseDTO(3, id, username, data);
     }
 
-    public static ResponseDTO bulkUpdate(String id,String username,String data) {
-        return new ResponseDTO(4,id,username ,data);
+    public static ResponseDTO bulkUpdate(String id, String username, String data) {
+        return new ResponseDTO(4, id, username, data);
     }
+
+//    public static ResponseDTO init()
 
 }

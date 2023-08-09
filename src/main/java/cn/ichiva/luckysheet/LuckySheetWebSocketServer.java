@@ -23,22 +23,27 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class LuckySheetWebSocketServer {
     //存储连接及昵称
-   static final  Map<Session,String> connMap = new ConcurrentHashMap<>();
+    static final Map<Session, String> connMap = new ConcurrentHashMap<>();
+
+    static int id=-1;
 
     private String name;
 
-    @OnOpen
-    public void onOpen(Session conn, @PathParam("name") String name) {
-        this.name = name;
-        connMap.put(conn,name);
-        log.info("{} 加入,在线人数 = {}",name,connMap.size());
+    private int myId;
 
+    @OnOpen
+    public void onOpen(Session conn, @PathParam("name") String name) throws IOException {
+        this.name = name;
+        connMap.put(conn, name);
+        log.info("{} 加入,在线人数 = {}", name, connMap.size());
+        myId=++id%100000;
+        conn.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(1,Integer.toString(myId),name,null)));
     }
 
     @OnClose
     public void onClose(Session conn) {
         String name = connMap.remove(conn);
-        log.info("{} 离开",name);
+        log.info("{} 离开", name);
     }
 
     @OnMessage
@@ -49,19 +54,19 @@ public class LuckySheetWebSocketServer {
                     return;
                 }
                 String unMessage = PakoGzipUtils.unCompressURI(message);
-                if(log.isTraceEnabled()) log.trace(unMessage);
+                if (log.isTraceEnabled()) log.trace(unMessage);
 
                 JSONObject jsonObject = JSON.parseObject(unMessage);
                 //广播
-                connMap.forEach((socket,n) -> {
+                connMap.forEach((socket, n) -> {
                     //排除自己
-                    if(conn == socket) return;
+                    if (conn == socket) return;
 
                     try {
                         if ("mv".equals(jsonObject.getString("t"))) {
-                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(3, name, name, unMessage)));
-                        }else if(!"shs".equals(jsonObject.getString("t"))){
-                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(2, name, name, unMessage)));
+                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(3, Integer.toString(myId), name, unMessage)));
+                        } else if (!"shs".equals(jsonObject.getString("t"))) {
+                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(2, Integer.toString(myId) , name, unMessage)));
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -75,11 +80,11 @@ public class LuckySheetWebSocketServer {
 
     @OnError
     public void onError(Session conn, Throwable ex) {
-        log.warn("链接错误",ex);
+        log.warn("链接错误", ex);
         try {
             conn.close();
         } catch (IOException e) {
-            log.error("错误链接关闭失败",e);
+            log.error("错误链接关闭失败", e);
         }
     }
 }

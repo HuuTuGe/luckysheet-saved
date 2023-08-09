@@ -34,9 +34,6 @@
                lang: 'zh',
                container: 'luckysheet',
                allowUpdate: true,
-               allowCopy:true,
-               showinfobar: true,//作用：是否显示顶部信息栏,
-               functionButton: '<button id="" class="btn btn-primary" onclick="saveData()" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">导出</button>  <button id="importExcelData" class="btn btn-primary" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">导入</button>',
                loadUrl:"http://"+ location.host +"/get",
                hook:{
 
@@ -51,9 +48,10 @@
                           var lockMark_1='locking['+sheetMark+']['+row_small+']['+column_small+']';
                           var nameMark_1='name['+sheetMark+']['+row_small+']['+column_small+']';
                             console.log('editbefore');
+                            console.log(id);
                             if(localStorage.getItem(lockMark_1)=='true')
                                {
-                                alert('此单元格已被用户【'+name+'】占用，请等待该用户编辑完再对此单元格进行修改');
+                                alert('being occupied')
                                 //api强制中途退出
                                  setTimeout('window.luckysheet.exitEditMode()',1);
                                }
