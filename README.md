@@ -10,5 +10,5 @@
 # 使用
 ## 导入IDEA
 ## 运行application
-## 打开http://localhost:11551/即可查看
+## 打开 http://localhost:11551/ 即可查看
 
