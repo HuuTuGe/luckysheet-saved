@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>luckysheet协同</title>
+    <link rel='stylesheet' href='module/luckysheel-2.1.13/plugins/css/pluginsCss.css' />
+    <link rel='stylesheet' href='module/luckysheel-2.1.13/plugins/plugins.css' />
+    <link rel='stylesheet' href='module/luckysheel-2.1.13/css/luckysheet.css' />
+    <link rel='stylesheet' href='module/luckysheel-2.1.13/assets/iconfont/iconfont.css' />
+    <script src="module/luckysheel-2.1.13/plugins/js/plugin.js"></script>
+    <script src="module/luckysheel-2.1.13/luckysheet.umd.js"></script>
+
+</head>
+
+<body onunload="checkLeaving()">
+    <div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;">
+
+    </div>
+   <script>
+       function checkLeaving(){
+              window.luckysheet.exitEditMode();
+              window.luckysheet.refresh();
+       }
+       $(function () {
+           var name = "";
+           while(name.length == 0){
+               name = prompt("请输入昵称")
+           }
+
+           var autoSave;
+           //配置项
+           var options = {
+               lang: 'zh',
+               container: 'luckysheet',
+               allowUpdate: true,
+               allowCopy:true,
+               showinfobar: true,//作用：是否显示顶部信息栏,
+               loadUrl:"http://"+ location.host +"/get",
+               hook:{
+
+               //lockMark 是否正在被占用
+               //nameMark 占用该格的用户名是什么 存了先开后开的问题不大
+               //sheetMark 该格子是哪个工作表的锁对应工作表的
+
+                   cellEditBefore:function(op){
+                          var row_small=op[0].row[0];
+                          var column_small=op[0].column[0];
+                          var sheetMark=luckysheet.getSheet().order;
+                          var lockMark_1='locking['+sheetMark+']['+row_small+']['+column_small+']';
+                          var nameMark_1='name['+sheetMark+']['+row_small+']['+column_small+']';
+                            console.log('editbefore');
+                            if(localStorage.getItem(lockMark_1)=='true')
+                               {
+                                alert('此单元格已被用户【'+name+'】占用，请等待该用户编辑完再对此单元格进行修改');
+                                //api强制中途退出
+                                 setTimeout('window.luckysheet.exitEditMode()',1);
+                               }
+                            else {
+                             //该用户选中单元格的上下界,考虑到共享编辑的可能是合并的单元格，但是只需要考虑左上角的，所以用locking三维数组存在localStorage来判断是否锁住了
+                                  localStorage.setItem(lockMark_1,true);
+                                  localStorage.setItem(nameMark_1,name);
+                                  //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
+                                  //备用 localStorage.clear();
+                               }
+
+                   },
+                //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
+                   cellUpdateBefore:function(op1,op2){
+                         var sheetMark=luckysheet.getSheet().order;
+                         var lockMark_2='locking['+sheetMark+']['+op1+']['+op2+']';
+                         var nameMark_2='name['+sheetMark+']['+op1+']['+op2+']';
+
+                         console.log('updatebefore');
+
+                         var thisName=name;
+                         if(thisName==localStorage.getItem(nameMark_2))
+                              {
+                              localStorage.removeItem(lockMark_2);
+                              localStorage.removeItem(nameMark_2);
+                              }
+                         else
+                              {
+                              return false;
+                              }
+
+                    },
+                   updated:function(e){
+                       //监听更新,并在3s后自动保存
+                       if(autoSave) clearTimeout(autoSave)
+                       $(luckysheet_info_detail_save).text("已修改")
+                       autoSave = setTimeout(function(){
+                           var excel = luckysheet.getAllSheets();
+                           //去除临时数据,减小体积
+                           for(var i in excel) excel[i].data = undefined
+                           $.post(
+                               "http://" + location.host + "/set",
+                               {jsonExcel:JSON.stringify(excel)},
+                               function(){
+                                   $(luckysheet_info_detail_save).text("已保存")
+                               })
+                       },3 * 1000)
+                       return true;
+                   }
+               },
+               updateUrl: "ws://" + location.hostname +":11551/" + name
+           }
+
+           console.log(JSON.stringify(options))
+           luckysheet.create(options)
+       })
+
+   </script>
+</body>
+
+</html>
