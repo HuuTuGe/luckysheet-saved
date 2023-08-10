@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="更新">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="more things to do">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/td-game-core-2023-08-08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/td-game-core-2023-08-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,26 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/HuuTuGe/Desktop/luckysheet-saved-mixed/luckysheet-saved&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.ichiva.luckysheet.Application" />
+      <module name="Luckysheet-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.ichiva.luckysheet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691635262706</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="more things to do">
+      <created>1691635396406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691635396406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +131,7 @@
     <MESSAGE value="README.md详细版" />
     <MESSAGE value="unversioned files" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="more things to do" />
+    <option name="LAST_COMMIT_MESSAGE" value="more things to do" />
   </component>
 </project>
