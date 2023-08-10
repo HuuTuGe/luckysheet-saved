@@ -7,12 +7,13 @@ together with Lin Jinkun
 - 多用户编辑不生成脏数据，一个用户编辑时使该单元格只读
 - 支持名字相同，用不同的用户id标注用户
 - 页面突然关闭时自动退出编辑模式
+- more to discover。。。
 
 # 原有功能
 - 自定义昵称
 - 实时协同编辑
 - 自动保存
-- 
+
 # 使用
 ## 导入IDEA
 ## 运行application
