@@ -28,21 +28,15 @@
            while(name.length == 0){
                name = prompt("请输入昵称")
            }
-
          let socket;
          if(typeof(WebSocket) == "undefined") {
             console.log("您使用的浏览器不支持WebSocket");
             }
          else{
-
            socket=new WebSocket("ws://" + location.hostname +":11551/" + name)
-           socket.onopen = () => {
-                console.log("已连接到websocket");
-            };
            socket.onmessage = resp => {
                 console.log("接收到服务端信息：" + resp.data);
                 jsonObject = JSON.parse(resp.data)
-                console.log(jsonObject.id);
             };
             }
 
