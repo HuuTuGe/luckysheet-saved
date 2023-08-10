@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="more things to do">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="清理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/td-game-core-2023-08-08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/td-game-core-2023-08-09.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
@@ -101,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691635396406</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="清理">
+      <created>1691636264590</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691636264590</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +136,7 @@
     <MESSAGE value="unversioned files" />
     <MESSAGE value="更新" />
     <MESSAGE value="more things to do" />
-    <option name="LAST_COMMIT_MESSAGE" value="more things to do" />
+    <MESSAGE value="清理" />
+    <option name="LAST_COMMIT_MESSAGE" value="清理" />
   </component>
 </project>

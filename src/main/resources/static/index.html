@@ -28,17 +28,16 @@
            while(name.length == 0){
                name = prompt("请输入昵称")
            }
-         let socket;
-         if(typeof(WebSocket) == "undefined") {
+           let socket;
+           if(typeof(WebSocket) == "undefined") {
             console.log("您使用的浏览器不支持WebSocket");
             }
-         else{
+           else{
            socket=new WebSocket("ws://" + location.hostname +":11551/" + name)
            socket.onmessage = resp => {
-                console.log("接收到服务端信息：" + resp.data);
                 jsonObject = JSON.parse(resp.data)
-            };
-            }
+           };
+           }
 
            var autoSave;
            //配置项
@@ -52,7 +51,6 @@
                //lockMark 是否正在被占用
                //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
                //sheetMark 该格子是哪个工作表的锁对应工作表的
-
                    cellEditBefore:function(op){
                           var row_small=op[0].row[0];
                           var column_small=op[0].column[0];
