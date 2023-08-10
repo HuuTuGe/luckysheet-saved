@@ -22,11 +22,29 @@
               window.luckysheet.exitEditMode();
               window.luckysheet.refresh();
        }
+       var jsonObject;
        $(function () {
            var name = "";
            while(name.length == 0){
                name = prompt("请输入昵称")
            }
+
+         let socket;
+         if(typeof(WebSocket) == "undefined") {
+            console.log("您使用的浏览器不支持WebSocket");
+            }
+         else{
+
+           socket=new WebSocket("ws://" + location.hostname +":11551/" + name)
+           socket.onopen = () => {
+                console.log("已连接到websocket");
+            };
+           socket.onmessage = resp => {
+                console.log("接收到服务端信息：" + resp.data);
+                jsonObject = JSON.parse(resp.data)
+                console.log(jsonObject.id);
+            };
+            }
 
            var autoSave;
            //配置项
@@ -38,7 +56,7 @@
                hook:{
 
                //lockMark 是否正在被占用
-               //nameMark 占用该格的用户名是什么 存了先开后开的问题不大
+               //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
                //sheetMark 该格子是哪个工作表的锁对应工作表的
 
                    cellEditBefore:function(op){
@@ -48,7 +66,7 @@
                           var lockMark_1='locking['+sheetMark+']['+row_small+']['+column_small+']';
                           var nameMark_1='name['+sheetMark+']['+row_small+']['+column_small+']';
                             console.log('editbefore');
-                            console.log(id);
+
                             if(localStorage.getItem(lockMark_1)=='true')
                                {
                                 alert('being occupied')
@@ -58,7 +76,7 @@
                             else {
                              //该用户选中单元格的上下界,考虑到共享编辑的可能是合并的单元格，但是只需要考虑左上角的，所以用locking三维数组存在localStorage来判断是否锁住了
                                   localStorage.setItem(lockMark_1,true);
-                                  localStorage.setItem(nameMark_1,name);
+                                  localStorage.setItem(nameMark_1,jsonObject.id);
                                   //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
                                   //备用 localStorage.clear();
                                }
@@ -72,7 +90,7 @@
 
                          console.log('updatebefore');
 
-                         var thisName=name;
+                         var thisName=jsonObject.id;
                          if(thisName==localStorage.getItem(nameMark_2))
                               {
                               localStorage.removeItem(lockMark_2);
