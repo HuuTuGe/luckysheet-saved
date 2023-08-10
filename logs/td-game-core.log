@@ -944,3 +944,6 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 2023-08-10 10:05:17,228  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 我 加入,在线人数 = 4
 2023-08-10 10:06:05,391  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 我 离开
 2023-08-10 10:06:05,391  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 我 离开
+2023-08-10 10:10:00,860  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-10 10:10:00,871  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 我 离开
+2023-08-10 10:10:00,872  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 我 离开
