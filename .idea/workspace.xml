@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="对齐">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -33,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HuuTuGe/Desktop/luckysheet-saved-mixed/luckysheet-saved&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/HuuTuGe/Desktop/luckysheet保存数据在线共享编辑/luckysheet-saved"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.ichiva.luckysheet.Application" />
-      <module name="Luckysheet-demo" />
+      <module name="luckysheet-saved" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.ichiva.luckysheet.*" />
@@ -112,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691637362943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject">
+      <created>1691639376481</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691639376481</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +153,7 @@
     <MESSAGE value="more things to do" />
     <MESSAGE value="清理" />
     <MESSAGE value="对齐" />
-    <option name="LAST_COMMIT_MESSAGE" value="对齐" />
+    <MESSAGE value="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject" />
+    <option name="LAST_COMMIT_MESSAGE" value="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject" />
   </component>
 </project>

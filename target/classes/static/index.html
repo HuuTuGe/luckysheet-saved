@@ -53,9 +53,12 @@
                lang: 'zh',
                container: 'luckysheet',
                allowUpdate: true,
+               showinfobar: true,//作用：是否显示顶部信息栏
                loadUrl:"http://"+ location.host +"/get",
+               updateUrl: "ws://" + location.hostname +":11551/" + name,
+                userInfo: '<i style="font-size:16px;color:#ff6a00;" class="fa fa-user-circle" aria-hidden="true"></i>',
+               functionButton: '<button id="" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">全屏</button>',
                hook:{
-
                //lockMark 是否正在被占用
                //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
                //sheetMark 该格子是哪个工作表的锁对应工作表的
@@ -118,13 +121,14 @@
                        return true;
                    }
                },
-               updateUrl: "ws://" + location.hostname +":11551/" + name
            }
-
            console.log(JSON.stringify(options));
            luckysheet.create(options)
        })
 
+    function fullScreen(type) {
+
+    }
    </script>
 </body>
 
