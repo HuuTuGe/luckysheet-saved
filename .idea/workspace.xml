@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="加了用户的头像和全屏的按钮">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -120,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691639376481</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="加了用户的头像和全屏的按钮">
+      <created>1692174040714</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692174040714</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +160,7 @@
     <MESSAGE value="清理" />
     <MESSAGE value="对齐" />
     <MESSAGE value="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject" />
-    <option name="LAST_COMMIT_MESSAGE" value="如果正在编辑被点击过会出现即使编辑完也不清掉localStorage的情况，经测试发现jsonObject一直在根据通信的变化变动，如果是同一个名字还会留下红色的痕迹,于是控制只拿第一次的jsonObject" />
+    <MESSAGE value="加了用户的头像和全屏的按钮" />
+    <option name="LAST_COMMIT_MESSAGE" value="加了用户的头像和全屏的按钮" />
   </component>
 </project>
