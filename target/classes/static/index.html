@@ -128,32 +128,24 @@
        })
 
     function fullScreen() {
+         this.fullScreenVisible = true
          let element = document.documentElement;
-         if (this.fullscreen) {
-          if (document.exitFullscreen) {
-           document.exitFullscreen();
-          } else if (document.webkitCancelFullScreen) {
-           document.webkitCancelFullScreen();
-          } else if (document.mozCancelFullScreen) {
-           document.mozCancelFullScreen();
-          } else if (document.msExitFullscreen) {
-           document.msExitFullscreen();
-          }
-         } else {
-          if (element.requestFullscreen) {
-       element.requestFullscreen();
-      }
-      else if (element.webkitRequestFullScreen) {
-       element.webkitRequestFullScreen();
-      } else if (element.mozRequestFullScreen) {
-       element.mozRequestFullScreen();
-      } else if (element.msRequestFullscreen) {
-       // IE11
-       element.msRequestFullscreen();
-      }
-     }
-     this.fullscreen = !this.fullscreen;
+          element.requestFullscreen()
+        // fullscreenchange 事件当浏览器进入或离开全屏时触发
+           document.addEventListener("fullscreenchange", (e) => {
+            if (document.fullscreenElement == null) {
+                this.closeFullScreen()
+            }
+        })
+        }
+        // 退出全屏
+   function closeFullScreen () {
+    this.fullScreenVisible = false
+    if (document.fullscreenElement !== null) {
+        document.exitFullscreen();
     }
+}
+
    </script>
 </body>
 
