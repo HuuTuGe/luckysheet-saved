@@ -57,8 +57,7 @@
                showinfobar: true,//作用：是否显示顶部信息栏
                loadUrl:"http://"+ location.host +"/get",
                updateUrl: "ws://" + location.hostname +":11551/" + name,
-                userInfo: '<i style="font-size:16px;color:#ff6a00;" class="fa fa-user-circle" aria-hidden="true"></i>',
-               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button>',
+               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView()" class="btn btn-primary" onclick="historyView()" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button>',
                hook:{
                //lockMark 是否正在被占用
                //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
@@ -86,7 +85,7 @@
                                }
 
                    },
-               //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
+                   //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
                    cellUpdateBefore:function(op1,op2){
                          var sheetMark=luckysheet.getSheet().order;
                          var lockMark_2='locking['+sheetMark+']['+op1+']['+op2+']';
@@ -127,28 +126,28 @@
            luckysheet.create(options)
        })
 
-    function fullScreen() {
-         this.fullScreenVisible = true
-         let element = document.documentElement;
-          element.requestFullscreen(fullScreen)
-          document.getElementById("fullScreen").style.display="none";
-           document.getElementById("closeFullScreen").style.display="block";
-        // fullscreenchange 事件当浏览器进入或离开全屏时触发
-           document.addEventListener("fullscreenchange", (e) => {
-            if (document.fullscreenElement == null) {
-                this.closeFullScreen()
+        function fullScreen() {
+             this.fullScreenVisible = true
+             let element = document.documentElement;
+              element.requestFullscreen(fullScreen)
+              document.getElementById("fullScreen").style.display="none";
+               document.getElementById("closeFullScreen").style.display="block";
+            // fullscreenchange 事件当浏览器进入或离开全屏时触发
+               document.addEventListener("fullscreenchange", (e) => {
+                if (document.fullscreenElement == null) {
+                    this.closeFullScreen()
+                }
+            })
             }
-        })
+            // 退出全屏
+        function closeFullScreen () {
+         this.fullScreenVisible = false
+         if (document.fullscreenElement !== null) {
+            document.getElementById("fullScreen").style.display="block";
+            document.getElementById("closeFullScreen").style.display="none";
+            document.exitFullscreen();
+         }
         }
-        // 退出全屏
-   function closeFullScreen () {
-    this.fullScreenVisible = false
-    if (document.fullscreenElement !== null) {
-        document.getElementById("fullScreen").style.display="block";
-        document.getElementById("closeFullScreen").style.display="none";
-        document.exitFullscreen();
-    }
-}
 
    </script>
 </body>
