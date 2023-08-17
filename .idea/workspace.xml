@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="BootStrap引入初步成功，考虑怎么改里面内容的格式">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="换成本地下载引入的bootstrap便于后续修改popover">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692254091370</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="换成本地下载引入的bootstrap便于后续修改popover">
+      <created>1692258059699</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692258059699</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +230,7 @@
     <MESSAGE value="全屏和退出全屏的按钮在全屏操作中的切换" />
     <MESSAGE value="历史记录的按钮" />
     <MESSAGE value="BootStrap引入初步成功，考虑怎么改里面内容的格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="BootStrap引入初步成功，考虑怎么改里面内容的格式" />
+    <MESSAGE value="换成本地下载引入的bootstrap便于后续修改popover" />
+    <option name="LAST_COMMIT_MESSAGE" value="换成本地下载引入的bootstrap便于后续修改popover" />
   </component>
 </project>
