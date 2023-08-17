@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="在退出全屏前判断 document.fullscreenElement != null">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="历史记录的按钮">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -154,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692176125250</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="全屏和退出全屏的按钮在全屏操作中的切换">
+      <created>1692236940189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692236940189</updated>
+    </task>
+    <task id="LOCAL-00014" summary="历史记录的按钮">
+      <created>1692240232343</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692240232343</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +207,8 @@
     <MESSAGE value="全屏按钮的功能初步实现，目前还有bug第二次运行时会报错" />
     <MESSAGE value="在退出全屏前判断 document.fullscreenElement !== null" />
     <MESSAGE value="在退出全屏前判断 document.fullscreenElement != null" />
-    <option name="LAST_COMMIT_MESSAGE" value="在退出全屏前判断 document.fullscreenElement != null" />
+    <MESSAGE value="全屏和退出全屏的按钮在全屏操作中的切换" />
+    <MESSAGE value="历史记录的按钮" />
+    <option name="LAST_COMMIT_MESSAGE" value="历史记录的按钮" />
   </component>
 </project>
