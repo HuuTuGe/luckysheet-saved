@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="历史记录的按钮">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="BootStrap引入初步成功，考虑怎么改里面内容的格式">
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
@@ -42,6 +42,13 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/HuuTuGe/Desktop/luckysheet保存数据在线共享编辑/luckysheet-saved&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved\src\main\resources\static\bootstrap-3.4.1-dist" />
+      <recent name="C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved\src\main\resources\static" />
+      <recent name="C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved\src\main\resources\static\bootstrap" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.ichiva.luckysheet.Application" />
@@ -169,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692240232343</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="BootStrap引入初步成功，考虑怎么改里面内容的格式">
+      <created>1692254091370</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1692254091370</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +223,7 @@
     <MESSAGE value="在退出全屏前判断 document.fullscreenElement != null" />
     <MESSAGE value="全屏和退出全屏的按钮在全屏操作中的切换" />
     <MESSAGE value="历史记录的按钮" />
-    <option name="LAST_COMMIT_MESSAGE" value="历史记录的按钮" />
+    <MESSAGE value="BootStrap引入初步成功，考虑怎么改里面内容的格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="BootStrap引入初步成功，考虑怎么改里面内容的格式" />
   </component>
 </project>
