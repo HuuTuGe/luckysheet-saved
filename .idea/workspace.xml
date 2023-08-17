@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="开发进度更新readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -210,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692259262404</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary=" 要是一开始就block在输入名字的时候表格尚未加载会显示编辑记录设置block">
+      <created>1692260481353</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1692260481353</updated>
+    </task>
+    <task id="LOCAL-00021" summary="开发进度更新readme">
+      <created>1692260599010</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1692260599010</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +268,8 @@
     <MESSAGE value="换成本地下载引入的bootstrap便于后续修改popover" />
     <MESSAGE value="引入文件的路径调整" />
     <MESSAGE value="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css" />
-    <option name="LAST_COMMIT_MESSAGE" value="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css" />
+    <MESSAGE value=" 要是一开始就block在输入名字的时候表格尚未加载会显示编辑记录设置block" />
+    <MESSAGE value="开发进度更新readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="开发进度更新readme" />
   </component>
 </project>

@@ -1991,3 +1991,308 @@
 2023-08-17 16:17:46,597  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
 2023-08-17 16:17:48,074  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
 2023-08-17 16:17:48,110  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-17 16:25:12,956  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-17 16:25:12,957  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-17 16:25:14,573  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
+2023-08-17 16:25:14,625  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-17 16:25:20,410  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-17 16:25:20,410  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-17 16:25:21,802  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 1 加入,在线人数 = 1
+2023-08-17 16:25:21,862  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 1 加入,在线人数 = 2
+2023-08-17 16:26:41,973  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 1 离开
+2023-08-17 16:26:41,973  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 1 离开
+2023-08-17 16:27:04,526  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:27:06,314  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 10312 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:27:06,316  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:27:06,947  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:27:06,954  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:27:06,954  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:27:06,954  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:27:07,022  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:27:07,022  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 668 ms
+2023-08-17 16:27:07,138  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:27:07,181  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:27:07,233  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:27:07,263  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:27:07,265  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.206 seconds (JVM running for 1.508)
+2023-08-17 16:27:10,632  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:27:10,632  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:27:10,635  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-17 16:27:12,847  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 1
+2023-08-17 16:27:12,899  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 2
+2023-08-17 16:27:56,027  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:27:56,036  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 123 离开
+2023-08-17 16:27:56,037  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 123 离开
+2023-08-17 16:27:57,894  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 4876 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:27:57,897  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:27:58,553  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:27:58,563  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:27:58,563  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:27:58,563  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:27:58,620  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:27:58,621  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 684 ms
+2023-08-17 16:27:58,746  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:27:58,789  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:27:58,842  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:27:58,871  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:27:58,872  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.248 seconds (JVM running for 1.655)
+2023-08-17 16:29:10,157  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:29:11,941 DEBUG [background-preinit] o.h.v.m.ResourceBundleMessageInterpolator Loaded expression factory via original TCCL
+2023-08-17 16:29:12,007  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 24996 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:29:12,008  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:29:12,651  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:29:12,660  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:29:12,660  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:29:12,660  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:29:12,718  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:29:12,718  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 675 ms
+2023-08-17 16:29:12,846  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:29:12,890  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:29:12,959  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:29:13,006  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:29:13,009  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.254 seconds (JVM running for 1.582)
+2023-08-17 16:29:14,407  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:29:14,407  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:29:14,411  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:29:16,642  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 111313 加入,在线人数 = 1
+2023-08-17 16:29:16,680  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 111313 加入,在线人数 = 2
+2023-08-17 16:29:46,509  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:29:46,517  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 111313 离开
+2023-08-17 16:29:46,518  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 111313 离开
+2023-08-17 16:29:48,376  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 25436 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:29:48,379  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:29:49,070  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:29:49,078  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:29:49,078  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:29:49,078  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:29:49,145  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:29:49,145  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 725 ms
+2023-08-17 16:29:49,270  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:29:49,311  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:29:49,364  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:29:49,402  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:29:49,404  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.316 seconds (JVM running for 1.714)
+2023-08-17 16:29:49,650  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:29:49,650  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:29:49,655  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 5 ms
+2023-08-17 16:29:51,610  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 513 加入,在线人数 = 1
+2023-08-17 16:29:51,671  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 513 加入,在线人数 = 2
+2023-08-17 16:31:07,427  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer 513 离开
+2023-08-17 16:31:07,433  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 513 离开
+2023-08-17 16:31:09,311  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 1
+2023-08-17 16:31:09,378  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 2
+2023-08-17 16:32:25,803  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:32:25,820  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 123 离开
+2023-08-17 16:32:25,820  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 123 离开
+2023-08-17 16:32:27,520  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 28680 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:32:27,522  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:32:28,176  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:32:28,182  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:32:28,182  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:32:28,182  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:32:28,248  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:32:28,249  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 690 ms
+2023-08-17 16:32:28,386  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:32:28,440  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:32:28,496  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:32:28,534  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:32:28,535  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.274 seconds (JVM running for 1.582)
+2023-08-17 16:32:31,051  INFO [http-nio-11551-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:32:31,053  INFO [http-nio-11551-exec-3] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:32:31,056  INFO [http-nio-11551-exec-3] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-17 16:32:32,747  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 1212 加入,在线人数 = 1
+2023-08-17 16:32:32,809  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 1212 加入,在线人数 = 2
+2023-08-17 16:32:48,515  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 1212 离开
+2023-08-17 16:32:48,523  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 1212 离开
+2023-08-17 16:32:49,985  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 3123 加入,在线人数 = 1
+2023-08-17 16:32:50,044  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 3123 加入,在线人数 = 2
+2023-08-17 16:35:27,880  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 3123 离开
+2023-08-17 16:35:27,880  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 3123 离开
+2023-08-17 16:35:29,413  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-17 16:35:29,469  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-17 16:41:23,459  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:41:23,467  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-17 16:41:23,467  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-17 16:41:25,306  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 25292 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:41:25,308  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:41:26,019  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:41:26,026  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:41:26,026  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:41:26,026  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:41:26,087  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:41:26,087  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 741 ms
+2023-08-17 16:41:26,224  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:41:26,275  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:41:26,329  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:41:26,360  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:41:26,361  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.324 seconds (JVM running for 1.676)
+2023-08-17 16:41:26,532  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:41:26,532  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:41:26,535  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-17 16:41:29,038  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 12333 加入,在线人数 = 1
+2023-08-17 16:41:29,111  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 12333 加入,在线人数 = 2
+2023-08-17 16:42:02,181  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:42:02,190  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12333 离开
+2023-08-17 16:42:02,191  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12333 离开
+2023-08-17 16:42:04,029  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 12420 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:42:04,031  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:42:04,772  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:42:04,778  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:42:04,778  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:42:04,779  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:42:04,834  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:42:04,835  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 753 ms
+2023-08-17 16:42:04,958  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:42:04,997  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:42:05,048  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:42:05,082  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:42:05,084  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.315 seconds (JVM running for 1.669)
+2023-08-17 16:42:07,408  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:42:07,408  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:42:07,412  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:42:09,067  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-17 16:42:09,104  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-17 16:43:00,215  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:43:00,223  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-17 16:43:00,223  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-17 16:43:02,035  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 5668 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:43:02,037  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:43:02,764  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:43:02,771  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:43:02,771  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:43:02,771  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:43:02,834  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:43:02,834  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 759 ms
+2023-08-17 16:43:02,970  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:43:03,016  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:43:03,063  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:43:03,095  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:43:03,096  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.324 seconds (JVM running for 1.645)
+2023-08-17 16:45:37,307  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:45:39,022  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 15612 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:45:39,024  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:45:39,695  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:45:39,701  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:45:39,702  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:45:39,702  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:45:39,759  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:45:39,759  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 701 ms
+2023-08-17 16:45:39,880  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:45:39,925  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:45:39,976  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:45:40,006  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:45:40,008  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.25 seconds (JVM running for 1.543)
+2023-08-17 16:45:44,423  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:45:44,423  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:45:44,427  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:45:46,759  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 54 加入,在线人数 = 1
+2023-08-17 16:45:46,791  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 54 加入,在线人数 = 2
+2023-08-17 16:46:26,963  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:46:26,970  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 54 离开
+2023-08-17 16:46:26,970  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 54 离开
+2023-08-17 16:46:28,837  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 28688 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:46:28,839  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:46:29,552  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:46:29,558  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:46:29,559  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:46:29,559  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:46:29,617  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:46:29,617  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 739 ms
+2023-08-17 16:46:29,743  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:46:29,792  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:46:29,844  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:46:29,873  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:46:29,875  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.326 seconds (JVM running for 1.67)
+2023-08-17 16:46:29,986  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:46:29,986  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:46:29,991  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:46:32,041  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 454 加入,在线人数 = 1
+2023-08-17 16:46:32,110  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 454 加入,在线人数 = 2
+2023-08-17 16:47:42,322  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:47:42,330  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 454 离开
+2023-08-17 16:47:42,331  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 454 离开
+2023-08-17 16:47:44,058  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 7940 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:47:44,060  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:47:44,671  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:47:44,677  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:47:44,678  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:47:44,678  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:47:44,742  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:47:44,742  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 644 ms
+2023-08-17 16:47:44,863  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:47:44,907  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:47:44,957  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:47:44,989  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:47:44,991  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.186 seconds (JVM running for 1.479)
+2023-08-17 16:47:52,047  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:47:52,047  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:47:52,050  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-17 16:47:54,443  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 看你看看 加入,在线人数 = 1
+2023-08-17 16:47:54,476  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 看你看看 加入,在线人数 = 2
+2023-08-17 16:48:22,902  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:48:22,910  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 看你看看 离开
+2023-08-17 16:48:22,910  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 看你看看 离开
+2023-08-17 16:48:24,788  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 25596 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:48:24,790  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:48:25,495  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:48:25,503  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:48:25,503  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:48:25,504  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:48:25,567  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:48:25,567  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 738 ms
+2023-08-17 16:48:25,701  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:48:25,749  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:48:25,802  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:48:25,836  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:48:25,838  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.317 seconds (JVM running for 1.744)
+2023-08-17 16:48:26,723  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:48:26,723  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:48:26,726  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-17 16:48:28,836  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 45 加入,在线人数 = 1
+2023-08-17 16:48:28,907  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 45 加入,在线人数 = 2
+2023-08-17 16:48:45,341  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:48:45,353  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 45 离开
+2023-08-17 16:48:45,353  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 45 离开
+2023-08-17 16:48:47,206  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 26248 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:48:47,209  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:48:47,891  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:48:47,903  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:48:47,903  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:48:47,904  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:48:47,966  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:48:47,966  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 719 ms
+2023-08-17 16:48:48,098  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:48:48,146  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:48:48,203  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:48:48,237  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:48:48,238  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.305 seconds (JVM running for 1.647)
+2023-08-17 16:48:49,003  INFO [http-nio-11551-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:48:49,004  INFO [http-nio-11551-exec-5] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:48:49,008  INFO [http-nio-11551-exec-5] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:48:51,279  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 什么，是 加入,在线人数 = 1
+2023-08-17 16:48:51,345  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer 什么，是 加入,在线人数 = 2
+2023-08-17 16:49:18,859  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 什么，是 离开
+2023-08-17 16:49:18,867  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 什么，是 离开
+2023-08-17 16:49:20,673  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 4 加入,在线人数 = 1
+2023-08-17 16:49:20,742  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 4 加入,在线人数 = 2
+2023-08-17 16:49:27,904  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:49:27,913  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 4 离开
+2023-08-17 16:49:27,914  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 4 离开
+2023-08-17 16:49:29,865  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 22924 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\luckysheet保存数据在线共享编辑\luckysheet-saved)
+2023-08-17 16:49:29,867  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-17 16:49:30,608  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-17 16:49:30,614  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:49:30,615  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-17 16:49:30,615  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-17 16:49:30,675  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-17 16:49:30,676  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 771 ms
+2023-08-17 16:49:30,804  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-17 16:49:30,850  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-17 16:49:30,901  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-17 16:49:30,932  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-17 16:49:30,933  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.367 seconds (JVM running for 1.7)
+2023-08-17 16:49:31,182  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-17 16:49:31,182  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-17 16:49:31,186  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-17 16:49:33,145  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 1
+2023-08-17 16:49:33,187  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer 123 加入,在线人数 = 2
