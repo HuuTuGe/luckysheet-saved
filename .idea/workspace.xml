@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="换成本地下载引入的bootstrap便于后续修改popover">
+    <list default="true" id="1d575140-f2de-4acb-9aa6-db5fb31404c6" name="Changes" comment="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/td-game-core.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/td-game-core.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
@@ -189,7 +189,28 @@
       <option name="project" value="LOCAL" />
       <updated>1692258059699</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css">
+      <created>1692259105017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1692259105017</updated>
+    </task>
+    <task id="LOCAL-00018" summary="引入文件的路径调整">
+      <created>1692259170252</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692259170252</updated>
+    </task>
+    <task id="LOCAL-00019" summary="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css">
+      <created>1692259262404</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692259262404</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,6 +252,8 @@
     <MESSAGE value="历史记录的按钮" />
     <MESSAGE value="BootStrap引入初步成功，考虑怎么改里面内容的格式" />
     <MESSAGE value="换成本地下载引入的bootstrap便于后续修改popover" />
-    <option name="LAST_COMMIT_MESSAGE" value="换成本地下载引入的bootstrap便于后续修改popover" />
+    <MESSAGE value="引入文件的路径调整" />
+    <MESSAGE value="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css" />
+    <option name="LAST_COMMIT_MESSAGE" value="table是动态渲染的对部分源码稍作调试的调整修改自己刚下载下来的js和css" />
   </component>
 </project>

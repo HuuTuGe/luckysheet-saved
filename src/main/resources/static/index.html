@@ -17,9 +17,13 @@
 </head>
 
 <body onunload="checkLeaving()">
-
+     <div>
         <div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;">
         </div>
+        <div id ="appsms" style="display:none">
+            2023/8/17 14:28:31 12将表1第x行第Y列修改为xxx
+        </div>
+     </div>
    <script>
        var jsonObject;
        var thisName;
@@ -60,7 +64,7 @@
                showinfobar: true,//作用：是否显示顶部信息栏
                loadUrl:"http://"+ location.host +"/get",
                updateUrl: "ws://" + location.hostname +":11551/" + name,
-               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView()" class="btn btn-primary" data-toggle="popover" data-placement="bottom" data-content="2023/8/17 14:28:31 12将表1第x行第Y列修改为xxx" title="编辑记录" onclick="historyView()" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button>',
+               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView()" class="btn btn-primary"  onclick="historyView(this)" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button>',
                hook:{
                //lockMark 是否正在被占用
                //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
@@ -152,12 +156,20 @@
          }
         }
         //对Bootstrap提供的弹出框JS插件进行初始化
-        function historyView(){
-            $('[data-toggle="popover"]').popover();
+        function historyView(o){
+            let _this = $(o);
+            _this.popover({
+                title: "编辑记录",
+                content: function () {
+                //要是一开始就block在输入名字的时候表格尚未加载会显示编辑记录
+                document.getElementById("appsms").style.display="block";
+                return $("#appsms")
+                }
+            });
+            _this.popover('show');
         }
 
    </script>
-
 </body>
 
 </html>
