@@ -58,7 +58,7 @@
                loadUrl:"http://"+ location.host +"/get",
                updateUrl: "ws://" + location.hostname +":11551/" + name,
                 userInfo: '<i style="font-size:16px;color:#ff6a00;" class="fa fa-user-circle" aria-hidden="true"></i>',
-               functionButton: '<button id="" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;margin-right: 10px;">全屏</button>',
+               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button>',
                hook:{
                //lockMark 是否正在被占用
                //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
@@ -130,7 +130,9 @@
     function fullScreen() {
          this.fullScreenVisible = true
          let element = document.documentElement;
-          element.requestFullscreen()
+          element.requestFullscreen(fullScreen)
+          document.getElementById("fullScreen").style.display="none";
+           document.getElementById("closeFullScreen").style.display="block";
         // fullscreenchange 事件当浏览器进入或离开全屏时触发
            document.addEventListener("fullscreenchange", (e) => {
             if (document.fullscreenElement == null) {
@@ -142,6 +144,8 @@
    function closeFullScreen () {
     this.fullScreenVisible = false
     if (document.fullscreenElement !== null) {
+        document.getElementById("fullScreen").style.display="block";
+        document.getElementById("closeFullScreen").style.display="none";
         document.exitFullscreen();
     }
 }
