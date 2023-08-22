@@ -170,11 +170,12 @@
         }
          // 自定义弹出框HTML的内容,"之前记得加转义符号
         function HTML(){
-                 var array_length=3;
+                 //数据模拟，先写死，后续用get来拿data[i].time等几个属性
+                 var array_length=10;
                  var time="2023/8/17 14:28:31";
                  var user="用户"
                  var operation="将表1第x行第Y列修改为xxx"
-                 var html ="<table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead><tbody>"
+                 var html ="<div style=\"height:300px;overflow:auto;\"><table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead><tbody>"
                  for(var i=0;i<array_length;i++)
                  {
                       html+="<tr>";
@@ -184,7 +185,7 @@
                       html = html+"<td><button class=\"btn btn-primary\">回退</button></td>"
                       html+="</tr>";
                  }
-                 html+="</tbody></table>"
+                 html+="</tbody></table></div>"
                   return html;
         }
    </script>
