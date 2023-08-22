@@ -158,9 +158,11 @@
                 title: "编辑记录",
                 trigger:'click',
                 html: true,
+                container:'body',
+                template:'<div class="popover"><div class="arrow"></div><div class="popover-title  clearfix"><h3 class="pull-left"></h3></div><div class="popover-content"></div></div>',
                 content: function HTML(){
-                // 自定义弹出框的内容
-                 var html = "Variable payoff curve"
+                // 自定义弹出框的内容,"之前记得加转义符号
+                 var html = "<table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead></tbody></table>"
                   return html;
                 }
             }).on('show.bs.popover', function () {

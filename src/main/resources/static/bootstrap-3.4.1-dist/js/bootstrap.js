@@ -1991,7 +1991,7 @@ if (typeof jQuery === 'undefined') {
         , html: true
         , container: 'body'
         , content: ''
-        , template: '<div class="popover"><div class="arrow"></div><div class="popover-title  clearfix"><h3 class="pull-left"></h3><span   class="btn-close pull-right  fa fa-window-close"></span></div><div class="popover-content"></div></div>'
+        , template: ''
     })
     // NOTE: POPOVER EXTENDS tooltip.js
     // ================================

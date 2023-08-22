@@ -6217,7 +6217,6 @@ button.close {
     .popover .btn-close {
        cursor:pointer;
        margin-top:2px;
-       display:"none";
     }
     .popover .btn-close:hover {
       color:red;
