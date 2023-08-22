@@ -591,3 +591,6 @@
 2023-08-22 10:31:30,643  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 5 ms
 2023-08-22 10:31:32,073  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
 2023-08-22 10:31:32,145  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-22 10:36:44,145  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-22 10:36:44,166  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-22 10:36:44,166  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
