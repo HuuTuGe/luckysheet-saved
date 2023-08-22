@@ -163,10 +163,11 @@
                  var html = "Variable payoff curve"
                   return html;
                 }
-            });
+            }).on('show.bs.popover', function () {
+			console.log('提示框要显示了');
+		    });
           });
         }
-
    </script>
 </body>
 
