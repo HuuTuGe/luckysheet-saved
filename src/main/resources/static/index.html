@@ -17,178 +17,192 @@
 </head>
 
 <body onunload="checkLeaving()">
-        <div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;">
-        </div>
-   <script>
-       var jsonObject;
-       var thisName;
-       var count=0;
-           function checkLeaving(){
-               window.luckysheet.exitEditMode();
-               window.luckysheet.refresh();
-           }
-           $(function () {
-               var name = "";
-               while(name.length == 0){
-                   name = prompt("请输入昵称")
-           }
-           let socket;
-           if(typeof(WebSocket) == "undefined")
-           {
-               console.log("您使用的浏览器不支持WebSocket");
-           }
-           else{
-               socket=new WebSocket("ws://" + location.hostname +":11551/" + name)
-               socket.onmessage = resp => {
-               //只拿一次，后面通信的不要了,不然会导致jsonObject一直更新
-                 if(count==0)
-                    {
-                    jsonObject = JSON.parse(resp.data);
-                    thisName=jsonObject.id;
-                    count++;
+    <div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;">
+    </div>
+    <script>
+        var jsonObject;
+        var thisName;
+        var count = 0;
+        function checkLeaving() {
+            window.luckysheet.exitEditMode();
+            window.luckysheet.refresh();
+        }
+        $(function() {
+            var name = "";
+            while (name.length == 0) {
+                name = prompt("请输入昵称")
+            }
+            let socket;
+            if (typeof (WebSocket) == "undefined") {
+                console.log("您使用的浏览器不支持WebSocket");
+            }
+            else {
+                socket = new WebSocket("ws://" + location.hostname + ":11551/" + name)
+                socket.onmessage = resp => {
+                    //只拿一次，后面通信的不要了,不然会导致jsonObject一直更新
+                    if (count == 0) {
+                        jsonObject = JSON.parse(resp.data);
+                        thisName = jsonObject.id;
+                        count++;
                     }
-               };
-           }
-           var autoSave;
-           var fullscreen=false;
-           //配置项
-           var options = {
-               lang: 'zh',
-               container: 'luckysheet',
-               allowUpdate: true,
-               showinfobar: true,//作用：是否显示顶部信息栏
-               loadUrl:"http://"+ location.host +"/get",
-               updateUrl: "ws://" + location.hostname +":11551/" + name,
-               functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView" data-toggle="popover" class="btn btn-primary"  style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button>',
-               hook:{
-               //lockMark 是否正在被占用
-               //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
-               //sheetMark 该格子是哪个工作表的锁对应工作表的
-                   cellEditBefore:function(op){
-                          var row_small=op[0].row[0];
-                          var column_small=op[0].column[0];
-                          var sheetMark=luckysheet.getSheet().order;
-                          var lockMark_1='locking['+sheetMark+']['+row_small+']['+column_small+']';
-                          var nameMark_1='name['+sheetMark+']['+row_small+']['+column_small+']';
-                            console.log('editbefore');
+                };
+            }
+            var autoSave;
+            var fullscreen = false;
+            //配置项
+            var options = {
+                lang: 'zh',
+                container: 'luckysheet',
+                allowUpdate: true,
+                showinfobar: true,//作用：是否显示顶部信息栏
+                loadUrl: "http://" + location.host + "/get",
+                updateUrl: "ws://" + location.hostname + ":11551/" + name,
+                functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView" data-toggle="popover" class="btn btn-primary"  style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button>',
+                hook: {
+                    //lockMark 是否正在被占用
+                    //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
+                    //sheetMark 该格子是哪个工作表的锁对应工作表的
+                    cellEditBefore: function(op) {
+                        var row_small = op[0].row[0];
+                        var column_small = op[0].column[0];
+                        var sheetMark = luckysheet.getSheet().order;
+                        var lockMark_1 = 'locking[' + sheetMark + '][' + row_small + '][' + column_small + ']';
+                        var nameMark_1 = 'name[' + sheetMark + '][' + row_small + '][' + column_small + ']';
+                        console.log('editbefore');
 
-                            if(localStorage.getItem(lockMark_1)=='true')
-                               {
-                                alert('being occupied')
-                                //api强制中途退出
-                                 setTimeout('window.luckysheet.exitEditMode()',1);
-                               }
-                            else {
-                             //该用户选中单元格的上下界,考虑到共享编辑的可能是合并的单元格，但是只需要考虑左上角的，所以用locking三维数组存在localStorage来判断是否锁住了
-                                  localStorage.setItem(lockMark_1,true);
-                                  localStorage.setItem(nameMark_1,thisName);
-                                  //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
-                                  //备用 localStorage.clear();
-                               }
-
-                   },
-                   //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
-                   cellUpdateBefore:function(op1,op2){
-                         var sheetMark=luckysheet.getSheet().order;
-                         var lockMark_2='locking['+sheetMark+']['+op1+']['+op2+']';
-                         var nameMark_2='name['+sheetMark+']['+op1+']['+op2+']';
-
-                         console.log('updatebefore');
-                         if(thisName==localStorage.getItem(nameMark_2))
-                              {
-                              localStorage.removeItem(lockMark_2);
-                              localStorage.removeItem(nameMark_2);
-                              }
-                         else
-                              {
-                              return false;
-                              }
+                        if (localStorage.getItem(lockMark_1) == 'true') {
+                            alert('being occupied')
+                            //api强制中途退出
+                            setTimeout('window.luckysheet.exitEditMode()', 1);
+                        }
+                        else {
+                            //该用户选中单元格的上下界,考虑到共享编辑的可能是合并的单元格，但是只需要考虑左上角的，所以用locking三维数组存在localStorage来判断是否锁住了
+                            localStorage.setItem(lockMark_1, true);
+                            localStorage.setItem(nameMark_1, thisName);
+                            //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
+                            //备用 localStorage.clear();
+                        }
 
                     },
-                   updated:function(e){
-                       //监听更新,并在3s后自动保存
-                       if(autoSave) clearTimeout(autoSave)
-                       $(luckysheet_info_detail_save).text("已修改")
-                       autoSave = setTimeout(function(){
-                           var excel = luckysheet.getAllSheets();
-                           //去除临时数据,减小体积
-                           for(var i in excel) excel[i].data = undefined
-                           $.post(
-                               "http://" + location.host + "/set",
-                               {jsonExcel:JSON.stringify(excel)},
-                               function(){
-                                   $(luckysheet_info_detail_save).text("已保存")
-                               })
-                       },3 * 1000)
-                       return true;
-                   }
-               },
-           }
-           console.log(JSON.stringify(options));
-           luckysheet.create(options)
-       })
+                    //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
+                    cellUpdateBefore: function(op1, op2) {
+                        var sheetMark = luckysheet.getSheet().order;
+                        var lockMark_2 = 'locking[' + sheetMark + '][' + op1 + '][' + op2 + ']';
+                        var nameMark_2 = 'name[' + sheetMark + '][' + op1 + '][' + op2 + ']';
+
+                        console.log('updatebefore');
+                        if (thisName == localStorage.getItem(nameMark_2)) {
+                            localStorage.removeItem(lockMark_2);
+                            localStorage.removeItem(nameMark_2);
+                        }
+                        else {
+                            return false;
+                        }
+
+                    },
+                    updated: function(e) {
+                        //监听更新,并在3s后自动保存
+                        if (autoSave) clearTimeout(autoSave)
+                        $(luckysheet_info_detail_save).text("已修改")
+                        autoSave = setTimeout(function() {
+                            var excel = luckysheet.getAllSheets();
+                            //去除临时数据,减小体积
+                            for (var i in excel) excel[i].data = undefined
+                            $.post(
+                                "http://" + location.host + "/set",
+                                { jsonExcel: JSON.stringify(excel) },
+                                function() {
+                                    $(luckysheet_info_detail_save).text("已保存")
+                                })
+                        }, 3 * 1000)
+                        return true;
+                    }
+                },
+            }
+            console.log(JSON.stringify(options));
+            luckysheet.create(options)
+        })
 
         function fullScreen() {
-             this.fullScreenVisible = true
-             let element = document.documentElement;
-              element.requestFullscreen(fullScreen)
-              document.getElementById("fullScreen").style.display="none";
-               document.getElementById("closeFullScreen").style.display="block";
+            this.fullScreenVisible = true
+            let element = document.documentElement;
+            element.requestFullscreen(fullScreen)
+            document.getElementById("fullScreen").style.display = "none";
+            document.getElementById("closeFullScreen").style.display = "block";
             // fullscreenchange 事件当浏览器进入或离开全屏时触发
-               document.addEventListener("fullscreenchange", (e) => {
+            document.addEventListener("fullscreenchange", (e) => {
                 if (document.fullscreenElement == null) {
                     this.closeFullScreen()
                 }
             })
+        }
+        // 退出全屏
+        function closeFullScreen() {
+            this.fullScreenVisible = false
+            if (document.fullscreenElement !== null) {
+                document.getElementById("fullScreen").style.display = "block";
+                document.getElementById("closeFullScreen").style.display = "none";
+                document.exitFullscreen();
             }
-            // 退出全屏
-        function closeFullScreen () {
-         this.fullScreenVisible = false
-         if (document.fullscreenElement !== null) {
-            document.getElementById("fullScreen").style.display="block";
-            document.getElementById("closeFullScreen").style.display="none";
-            document.exitFullscreen();
-         }
         }
         //对Bootstrap提供的弹出框JS插件进行初始化
-         window.onload = function(){
-	    $(function () {
-		 // 解决bootstrap下拉菜单第一次点击无反应问题
-		   $("#historyView").popover({
-                title: "编辑记录",
-                trigger:'click',
-                html: true,
-                container:'body',
-                template:'<div class="popover"><div class="arrow"></div><div class="popover-title  clearfix"><h3 class="pull-left"></h3></div><div class="popover-content"></div></div>',
-                content: HTML()
-            }).on('show.bs.popover', function () {
-			console.log('提示框要显示了');
-			console.log($("#history").attr)
-			;
-		    });
-          });
+        window.onload = function() {
+            $(function() {
+                // 解决bootstrap下拉菜单第一次点击无反应问题
+                $("#historyView").popover({
+                    title: "编辑记录",
+                    trigger: 'click',
+                    html: true,
+                    container: 'body',
+                    template: '<div class="popover"><div class="arrow"></div><div class="popover-title  clearfix"><h3 class="pull-left"></h3></div><div class="popover-content"></div></div>',
+                    content: "<div id='historyView_div'></div>"
+                }).on('show.bs.popover', function() {
+                    $('[data-toggle="popover"]').css('background-color', "#0038a8");
+                    //提示框要显示了
+                    html = HTML();
+                    $('[data-toggle="popover"]').attr('data-content', html);
+                }).on('hide.bs.popover', function() {
+                    //提示框要关闭了
+                    //按钮选中的颜色取消
+                    $('[data-toggle="popover"]').css('background-color', "#006db0");
+                });
+            });
         }
-         // 自定义弹出框HTML的内容,"之前记得加转义符号
-        function HTML(){
-                 //数据模拟，先写死，后续用get来拿data[i].time等几个属性
-                 var array_length=10;
-                 var time="2023/8/17 14:28:31";
-                 var user="用户"
-                 var operation="将表1第x行第Y列修改为xxx"
-                 var html ="<div style=\"height:300px;overflow:auto;\"><table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead><tbody>"
-                 for(var i=0;i<array_length;i++)
-                 {
-                      html+="<tr>";
-                      html = html+"<td>"+time+"</td>"
-                      html = html+"<td>"+user+"</td>"
-                      html = html+"<td>"+operation+"</td>"
-                      html = html+"<td><button class=\"btn btn-primary\">回退</button></td>"
-                      html+="</tr>";
-                 }
-                 html+="</tbody></table></div>"
-                  return html;
+
+        // 自定义弹出框HTML的内容,"之前记得加转义符号
+        function HTML() {
+            var date = new Date();
+            //数据模拟，先写死，后续用get来拿data[i].time等几个属性
+            //用prompt测试能不能动态写入数据(可以控制出现几个了)
+            var array_length = prompt("导出记录个数");
+            var time = "2023/8/17 14:28:31";
+            var user = "用户"
+            var operation = "将表1第x行第Y列修改为xxx"
+            var html = "<div style=\"height:300px;overflow:auto;\"><div style=\"font-style:italic;color:#999999;\">当前记录截止至"
+            html += date.toLocaleTimeString()
+            html += "</div><table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">编号</th><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead><tbody>"
+            for (var i = 1; i <= array_length; i++) {
+                html += "<tr>";
+                html += ("<td>" + i + "</td>")
+                html += ("<td>" + time + "</td>")
+                html += ("<td>" + user + "</td>")
+                html += ("<td>" + operation + "</td>")
+                html += ("<td><button onclick=\"backward(this)\" class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></td>")
+                html += "</tr>";
+            }
+            html += "</tbody></table></div>"
+            return html;
         }
-   </script>
+        function backward(obj) {
+            var str = obj.id;
+            //剥离return_button判断是第几个按钮(控制台可见)
+            var reg = new RegExp("return_button");
+            var printwords = str.replace(reg, "");
+            //printwords传给后端让后端把这个标号的版本作为新的一个版本
+            console.log("点击了回退的按钮,你后面要传的参数是" + printwords);
+        }
+
+    </script>
 </body>
 
 </html>
