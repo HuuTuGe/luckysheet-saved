@@ -187,12 +187,21 @@
                 html += ("<td>" + time + "</td>")
                 html += ("<td>" + user + "</td>")
                 html += ("<td>" + operation + "</td>")
-                html += ("<td><button class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></td>")
+                html += ("<td><button onclick=\"backward(this)\" class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></td>")
                 html += "</tr>";
             }
             html += "</tbody></table></div>"
             return html;
         }
+        function backward(obj) {
+            var str = obj.id;
+            //剥离return_button判断是第几个按钮(控制台可见)
+            var reg = new RegExp("return_button");
+            var printwords = str.replace(reg, "");
+            //printwords传给后端让后端把这个标号的版本作为新的一个版本
+            console.log("点击了回退的按钮,你后面要传的参数是" + printwords);
+        }
+
     </script>
 </body>
 
