@@ -2533,3 +2533,6 @@ Identify and stop the process that's listening on port 11551 or configure this a
 2023-08-23 16:00:52,037  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 5 ms
 2023-08-23 16:00:53,933  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 45 加入,在线人数 = 1
 2023-08-23 16:00:54,016  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 45 加入,在线人数 = 2
+2023-08-23 16:03:05,089  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-23 16:03:05,111  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 45 离开
+2023-08-23 16:03:05,112  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 45 离开
