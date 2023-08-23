@@ -174,7 +174,7 @@
             var date = new Date();
             //数据模拟，先写死，后续用get来拿data[i].time等几个属性
             //用prompt测试能不能动态写入数据(可以控制出现几个了)
-            var array_length = prompt();
+            var array_length = prompt("导出记录个数");
             var time = "2023/8/17 14:28:31";
             var user = "用户"
             var operation = "将表1第x行第Y列修改为xxx"
@@ -187,7 +187,7 @@
                 html += ("<td>" + time + "</td>")
                 html += ("<td>" + user + "</td>")
                 html += ("<td>" + operation + "</td>")
-                html += ("<td><button class=\"btn btn-primary\">回退</button></td>")
+                html += ("<td><button class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></td>")
                 html += "</tr>";
             }
             html += "</tbody></table></div>"
