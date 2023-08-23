@@ -172,6 +172,9 @@
         // 自定义弹出框HTML的内容,"之前记得加转义符号
         function HTML() {
             var date = new Date();
+            /*获取参数
+            ------------------
+            */
             //数据模拟，先写死，后续用get来拿data[i].time等几个属性
             //用prompt测试能不能动态写入数据(可以控制出现几个了)
             var array_length = prompt("导出记录个数");
@@ -200,6 +203,11 @@
             var printwords = str.replace(reg, "");
             //printwords传给后端让后端把这个标号的版本作为新的一个版本
             console.log("点击了回退的按钮,你后面要传的参数是" + printwords);
+            /*传参数
+            ------------------
+            */
+            //点击回退后强制hide重新打开刷新历史记录版本
+            $('[data-toggle="popover"]').popover('hide');
         }
 
     </script>
