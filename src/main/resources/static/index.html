@@ -157,9 +157,14 @@
                     template: '<div class="popover"><div class="arrow"></div><div class="popover-title  clearfix"><h3 class="pull-left"></h3></div><div class="popover-content"></div></div>',
                     content: "<div id='historyView_div'></div>"
                 }).on('show.bs.popover', function() {
-                    console.log('提示框要显示了');
+                    $('[data-toggle="popover"]').css('background-color', "#0038a8");
+                    //提示框要显示了
                     html = HTML();
-                    console.log($('[data-toggle="popover"]').attr('data-content', html));
+                    $('[data-toggle="popover"]').attr('data-content', html);
+                }).on('hide.bs.popover', function() {
+                    //提示框要关闭了
+                    //按钮选中的颜色取消
+                    $('[data-toggle="popover"]').css('background-color', "#006db0");
                 });
             });
         }
