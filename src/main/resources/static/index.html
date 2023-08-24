@@ -190,7 +190,7 @@
                 html += ("<td>" + time + "</td>")
                 html += ("<td>" + user + "</td>")
                 html += ("<td>" + operation + "</td>")
-                html += ("<td><button onclick=\"backward(this)\" class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></td>")
+                html += ("<td><span class=\"d-inline-block\" tabindex=\"0\" data-toggle=\"tooltip\" title=\"一旦点击，不可撤销\"><button onclick=\"backward(this)\" class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></span></td>")
                 html += "</tr>";
             }
             html += "</tbody></table></div>"
