@@ -172,6 +172,9 @@
         // 自定义弹出框HTML的内容,"之前记得加转义符号
         function HTML() {
             var date = new Date();
+            /*获取参数
+            ------------------
+            */
             //数据模拟，先写死，后续用get来拿data[i].time等几个属性
             //用prompt测试能不能动态写入数据(可以控制出现几个了)
             var array_length = prompt("导出记录个数");
@@ -180,7 +183,7 @@
             var operation = "将表1第x行第Y列修改为xxx"
             var html = "<div style=\"height:300px;overflow:auto;\"><div style=\"font-style:italic;color:#999999;\">当前记录截止至"
             html += date.toLocaleTimeString()
-            html += "</div><table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th scope=\"row\">编号</th><th scope=\"row\">时间</th><th scope=\"row\">用户</th><th scope=\"row\">编辑动作</th><th scope=\"row\">可执行操作</th></thead><tbody>"
+            html += "</div><table class=\"table table-bordered table-hover table-striped table-sm\"><thead><tr><th>编&nbsp&nbsp号</th><th>时间</th><th>用&nbsp&nbsp户</th><th>编&nbsp&nbsp辑&nbsp&nbsp动&nbsp&nbsp作&nbsp&nbsp</th><th>可&nbsp&nbsp执&nbsp&nbsp行&nbsp&nbsp操&nbsp&nbsp作</th></thead><tbody>"
             for (var i = 1; i <= array_length; i++) {
                 html += "<tr>";
                 html += ("<td>" + i + "</td>")
@@ -195,11 +198,16 @@
         }
         function backward(obj) {
             var str = obj.id;
-            //剥离return_button判断是第几个按钮
+            //剥离return_button判断是第几个按钮(控制台可见)
             var reg = new RegExp("return_button");
             var printwords = str.replace(reg, "");
             //printwords传给后端让后端把这个标号的版本作为新的一个版本
             console.log("点击了回退的按钮,你后面要传的参数是" + printwords);
+            /*传参数
+            ------------------
+            */
+            //点击回退后强制hide重新打开刷新历史记录版本
+            $('[data-toggle="popover"]').popover('hide');
         }
 
     </script>
