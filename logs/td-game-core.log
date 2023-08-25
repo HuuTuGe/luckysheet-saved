@@ -1587,3 +1587,474 @@ java.sql.SQLSyntaxErrorException: Unknown database 'luckysheet_db'
 2023-08-25 15:44:25,275  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
 2023-08-25 15:44:30,401  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer test1 加入,在线人数 = 1
 2023-08-25 15:44:30,445  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer test1 加入,在线人数 = 2
+2023-08-25 15:45:39,553  WARN [http-nio-11551-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'info' is not present]
+2023-08-25 15:45:40,132  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer test1 加入,在线人数 = 3
+2023-08-25 15:47:38,834  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer test1 离开
+2023-08-25 15:47:38,834  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer test1 离开
+2023-08-25 15:47:38,835  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer test1 离开
+2023-08-25 15:47:40,348  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-25 15:47:40,419  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-25 15:47:46,684  WARN [http-nio-11551-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'info' is not present]
+2023-08-25 15:47:47,249  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 3
+2023-08-25 15:48:22,992  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:48:22,993  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:48:22,993  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:48:24,859  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-25 15:48:24,929  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-25 15:50:02,234  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:50:02,234  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:50:03,723  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-25 15:50:03,795  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-25 15:50:10,733  WARN [http-nio-11551-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'info' is not present]
+2023-08-25 15:50:11,297  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 3
+2023-08-25 15:50:13,596  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:50:13,596  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:50:13,596  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 15:55:58,410  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 15:56:02,019  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 26124 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 15:56:02,022  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 15:56:02,857  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 15:56:02,865  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 15:56:02,865  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 15:56:02,865  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 15:56:02,935  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 15:56:02,936  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 870 ms
+2023-08-25 15:56:03,098  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 15:56:03,149  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 15:56:03,237  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 15:56:03,273  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 15:56:03,275  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.57 seconds (JVM running for 1.95)
+2023-08-25 15:56:26,209  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 15:56:29,718  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 33932 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 15:56:29,720  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 15:56:30,566  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 15:56:30,574  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 15:56:30,574  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 15:56:30,574  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 15:56:30,640  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 15:56:30,640  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 875 ms
+2023-08-25 15:56:30,784  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 15:56:30,831  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 15:56:30,912  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 15:56:30,946  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 15:56:30,948  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.54 seconds (JVM running for 1.94)
+2023-08-25 15:56:30,983  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 15:56:30,984  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 15:56:30,990  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 6 ms
+2023-08-25 15:56:32,802  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer sadds 加入,在线人数 = 1
+2023-08-25 15:56:32,885  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer sadds 加入,在线人数 = 2
+2023-08-25 15:56:39,203 ERROR [http-nio-11551-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.sql.SQLException: Column 'doc' not found.] with root cause
+java.sql.SQLException: Column 'doc' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at cn.ichiva.luckysheet.DAO.RecordDAO.goBackinfo(RecordDAO.java:88)
+	at cn.ichiva.luckysheet.service.RecordService.goBackinfo(RecordService.java:39)
+	at cn.ichiva.luckysheet.LuckySheetController.goBack(LuckySheetController.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-08-25 15:56:39,683  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer sadds 加入,在线人数 = 3
+2023-08-25 16:01:17,566  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:01:17,577  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer sadds 离开
+2023-08-25 16:01:17,577  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer sadds 离开
+2023-08-25 16:01:17,577  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer sadds 离开
+2023-08-25 16:01:20,975  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 6236 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:01:20,978  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:01:21,892  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:01:21,901  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:01:21,901  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:01:21,901  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:01:21,968  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:01:21,969  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 945 ms
+2023-08-25 16:01:22,116  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:01:22,167  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:01:22,257  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:01:22,292  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:01:22,294  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.622 seconds (JVM running for 2.007)
+2023-08-25 16:01:29,870  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:01:29,870  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:01:29,874  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-25 16:01:54,701  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
+2023-08-25 16:01:54,742  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-25 16:01:58,714 ERROR [http-nio-11551-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.sql.SQLException: Column 'doc' not found.] with root cause
+java.sql.SQLException: Column 'doc' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at cn.ichiva.luckysheet.DAO.RecordDAO.goBackinfo(RecordDAO.java:88)
+	at cn.ichiva.luckysheet.service.RecordService.goBackinfo(RecordService.java:39)
+	at cn.ichiva.luckysheet.LuckySheetController.goBack(LuckySheetController.java:94)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-08-25 16:01:59,240  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 3
+2023-08-25 16:04:54,568  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:04:54,579  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:04:54,580  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:04:54,580  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:04:57,780  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 8380 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:04:57,782  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:04:58,599  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:04:58,607  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:04:58,607  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:04:58,607  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:04:58,679  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:04:58,679  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 854 ms
+2023-08-25 16:04:58,848  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:04:58,896  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:04:58,989  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:04:59,025  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:04:59,027  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.531 seconds (JVM running for 1.896)
+2023-08-25 16:05:01,169  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:05:01,169  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:05:01,173  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-25 16:05:04,814  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 1
+2023-08-25 16:05:04,862  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 2
+2023-08-25 16:05:07,752 ERROR [http-nio-11551-exec-9] o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.sql.SQLException: Illegal operation on empty result set.] with root cause
+java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:532)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:878)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at cn.ichiva.luckysheet.DAO.RecordDAO.goBack(RecordDAO.java:68)
+	at cn.ichiva.luckysheet.service.RecordService.goBack(RecordService.java:36)
+	at cn.ichiva.luckysheet.LuckySheetController.goBack(LuckySheetController.java:92)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-08-25 16:05:08,260  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 3
+2023-08-25 16:05:51,440  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:05:51,456  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:05:51,457  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:05:51,457  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:05:54,671 DEBUG [background-preinit] o.h.v.m.ResourceBundleMessageInterpolator Loaded expression factory via original TCCL
+2023-08-25 16:05:54,744  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 8320 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:05:54,745  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:05:55,551  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:05:55,560  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:05:55,560  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:05:55,560  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:05:55,630  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:05:55,630  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 842 ms
+2023-08-25 16:05:55,768  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:05:55,817  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:05:55,894  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:05:55,929  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:05:55,931  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.491 seconds (JVM running for 1.859)
+2023-08-25 16:06:01,333  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:06:01,333  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:06:01,336  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 3 ms
+2023-08-25 16:06:02,945  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 1
+2023-08-25 16:06:02,988  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 2
+2023-08-25 16:06:08,513 ERROR [http-nio-11551-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.sql.SQLException: Column 'doc' not found.] with root cause
+java.sql.SQLException: Column 'doc' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:584)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:896)
+	at cn.ichiva.luckysheet.DAO.RecordDAO.goBackinfo(RecordDAO.java:88)
+	at cn.ichiva.luckysheet.service.RecordService.goBackinfo(RecordService.java:39)
+	at cn.ichiva.luckysheet.LuckySheetController.goBack(LuckySheetController.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-08-25 16:06:09,007  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 3
+2023-08-25 16:06:55,137  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:06:55,137  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:06:55,149  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:06:57,099  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 452 加入,在线人数 = 1
+2023-08-25 16:06:57,297  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 452 加入,在线人数 = 2
+2023-08-25 16:08:31,008  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:08:31,028  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 452 离开
+2023-08-25 16:08:31,029  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 452 离开
+2023-08-25 16:08:35,189  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 33744 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:08:35,192  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:08:36,192  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:08:36,202  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:08:36,202  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:08:36,202  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:08:36,292  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:08:36,301  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1061 ms
+2023-08-25 16:08:36,515  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:08:36,575  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:08:36,679  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:08:36,725  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:08:36,728  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.922 seconds (JVM running for 2.374)
+2023-08-25 16:08:36,772  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:08:36,772  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:08:36,777  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 5 ms
+2023-08-25 16:08:38,668  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 55 加入,在线人数 = 1
+2023-08-25 16:08:38,716  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 55 加入,在线人数 = 2
+2023-08-25 16:08:44,834  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 55 加入,在线人数 = 3
+2023-08-25 16:11:04,729  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 55 离开
+2023-08-25 16:11:04,729  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 55 离开
+2023-08-25 16:11:04,739  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 55 离开
+2023-08-25 16:11:06,059  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 1
+2023-08-25 16:11:06,129  INFO [http-nio-11551-exec-1] c.i.l.LuckySheetWebSocketServer 12 加入,在线人数 = 2
+2023-08-25 16:11:28,343  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:11:28,361  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 16:11:28,361  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 12 离开
+2023-08-25 16:13:11,906  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 8084 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:13:11,908  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:13:12,688  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:13:12,694  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:13:12,695  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:13:12,695  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:13:12,762  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:13:12,762  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 813 ms
+2023-08-25 16:13:12,901  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:13:12,953  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:13:13,039  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:13:13,072  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:13:13,074  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.466 seconds (JVM running for 1.849)
+2023-08-25 16:13:14,554  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:13:14,554  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:13:14,558  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-25 16:13:16,151  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
+2023-08-25 16:13:16,242  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-25 16:13:20,681  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 3
+2023-08-25 16:13:24,484  INFO [http-nio-11551-exec-4] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:13:24,484  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:13:24,498  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:13:25,852  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
+2023-08-25 16:13:25,926  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-25 16:14:00,422  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:14:00,452  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:14:00,452  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:14:03,723  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 27372 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:14:03,726  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:14:04,538  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:14:04,546  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:14:04,547  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:14:04,547  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:14:04,617  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:14:04,617  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 848 ms
+2023-08-25 16:14:04,770  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:14:04,818  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:14:04,902  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:14:04,937  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:14:04,939  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.535 seconds (JVM running for 1.9)
+2023-08-25 16:14:04,974  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:14:04,974  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:14:04,978  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 4 ms
+2023-08-25 16:14:06,592  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 1
+2023-08-25 16:14:06,640  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 2
+2023-08-25 16:14:11,266  INFO [http-nio-11551-exec-9] c.i.l.LuckySheetWebSocketServer ss 加入,在线人数 = 3
+2023-08-25 16:14:15,017  INFO [http-nio-11551-exec-2] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:14:15,017  INFO [http-nio-11551-exec-7] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:14:15,030  INFO [http-nio-11551-exec-3] c.i.l.LuckySheetWebSocketServer ss 离开
+2023-08-25 16:14:16,488  INFO [http-nio-11551-exec-8] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 1
+2023-08-25 16:14:16,554  INFO [http-nio-11551-exec-10] c.i.l.LuckySheetWebSocketServer 23 加入,在线人数 = 2
+2023-08-25 16:16:55,290  INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:16:55,308  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:16:55,308  INFO [SpringContextShutdownHook] c.i.l.LuckySheetWebSocketServer 23 离开
+2023-08-25 16:16:57,690  INFO [main] cn.ichiva.luckysheet.Application Starting Application on LAPTOP-OI1F3CR6 with PID 33936 (started by HuuTuGe in C:\Users\HuuTuGe\Desktop\新建文件夹)
+2023-08-25 16:16:57,692  INFO [main] cn.ichiva.luckysheet.Application No active profile set, falling back to default profiles: default
+2023-08-25 16:16:58,522  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat initialized with port(s): 11551 (http)
+2023-08-25 16:16:58,530  INFO [main] o.a.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:16:58,530  INFO [main] o.a.catalina.core.StandardService Starting service [Tomcat]
+2023-08-25 16:16:58,530  INFO [main] o.a.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.30]
+2023-08-25 16:16:58,600  INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2023-08-25 16:16:58,601  INFO [main] o.s.web.context.ContextLoader Root WebApplicationContext: initialization completed in 848 ms
+2023-08-25 16:16:58,754  INFO [main] o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-25 16:16:58,807  INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping Adding welcome page: class path resource [static/index.html]
+2023-08-25 16:16:58,890  INFO [main] o.a.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-11551"]
+2023-08-25 16:16:58,924  INFO [main] o.s.b.w.e.tomcat.TomcatWebServer Tomcat started on port(s): 11551 (http) with context path ''
+2023-08-25 16:16:58,927  INFO [main] cn.ichiva.luckysheet.Application Started Application in 1.532 seconds (JVM running for 1.923)
+2023-08-25 16:16:58,982  INFO [http-nio-11551-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-25 16:16:58,982  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2023-08-25 16:16:58,988  INFO [http-nio-11551-exec-1] o.s.web.servlet.DispatcherServlet Completed initialization in 6 ms
+2023-08-25 16:17:00,655  INFO [http-nio-11551-exec-5] c.i.l.LuckySheetWebSocketServer sss 加入,在线人数 = 1
+2023-08-25 16:17:00,724  INFO [http-nio-11551-exec-6] c.i.l.LuckySheetWebSocketServer sss 加入,在线人数 = 2

@@ -35,4 +35,5 @@ public class RecordService {
     public String goBack(int id) {
         return recordDAO.goBack(id);
     }
+
 }

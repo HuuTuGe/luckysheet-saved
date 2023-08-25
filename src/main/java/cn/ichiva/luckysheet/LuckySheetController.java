@@ -38,6 +38,7 @@ public class LuckySheetController {
     //当前文档
     String doc;
 
+
     @Autowired
     RecordService recordService;
 
@@ -86,11 +87,13 @@ public class LuckySheetController {
 
     //版本回溯
     @RequestMapping("/goBack")
-    public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name,@RequestParam(value = "info") String info) {
+    public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name) {
 
         doc=recordService.goBack(id);
+        String info="回退到版本"+id;
         recordService.record(doc,name,info);
         System.out.println(doc);
+        System.out.println(info);
         return true;
     }
 }
