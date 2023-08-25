@@ -1,6 +1,10 @@
 package cn.ichiva.luckysheet;
 
+import cn.ichiva.luckysheet.pojo.Record;
+import cn.ichiva.luckysheet.service.RecordService;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,7 +12,11 @@ import javax.annotation.PostConstruct;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.time.LocalTime;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +37,9 @@ public class LuckySheetController {
     String defDoc;
     //当前文档
     String doc;
+
+    @Autowired
+    RecordService recordService;
 
     @PostConstruct
     public void init(){
@@ -54,8 +65,32 @@ public class LuckySheetController {
 
     //设置文件
     @PostMapping("/set")
-    public Object set(String jsonExcel) throws IOException {
+    public Object set(@RequestParam(value = "jsonExcel") String jsonExcel,@RequestParam(value = "name") String name) throws IOException {
         doc = jsonExcel;
+        return recordService.record(doc,name);
+    }
+
+    //查看历史记录
+    @RequestMapping("/viewRecord")
+    public Object viewRecord() {
+        List<Record> list=new ArrayList<>();
+        try {
+            list=recordService.viewRecord();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+//        Gson gson=new Gson();
+//        String str= gson.toJson(list);
+        return list;
+    }
+
+    //版本回溯
+    @RequestMapping("/goBack")
+    public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name) {
+
+        doc=recordService.goBack(id);
+        recordService.record(doc,name);
+        System.out.println(doc);
         return true;
     }
 }

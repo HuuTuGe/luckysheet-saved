@@ -41,6 +41,8 @@ public class ResponseDTO implements Serializable {
         return new ResponseDTO(4, id, username, data);
     }
 
-//    public static ResponseDTO init()
+    public static ResponseDTO leave(String id, String username, String data) {
+        return new ResponseDTO(5, id, username, data);
+    }
 
 }

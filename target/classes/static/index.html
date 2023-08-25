@@ -240,8 +240,9 @@
             $.post(
                 "http://" + location.host + "/goBack",
                 {
-                    id: printwords,
-                    name:thisName
+                    id:printwords,
+                    name:thisName,
+                    info:infoTips
                 },
             )
             //点击回退后强制hide重新打开刷新历史记录版本
@@ -333,7 +334,8 @@
                                     "http://" + location.host + "/set",
                                     {
                                         jsonExcel: JSON.stringify(excel),
-                                        name: thisName
+                                        name: thisName,
+                                        info:infoTips
                                     },
                                     function () {
                                         $(luckysheet_info_detail_save).text("已保存")

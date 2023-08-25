@@ -63,6 +63,7 @@ public class LuckySheetWebSocketServer {
                     if (conn == socket) return;
 
                     try {
+                        //
                         if ("mv".equals(jsonObject.getString("t"))) {
                             socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(3, Integer.toString(myId), name, unMessage)));
                         } else if (!"shs".equals(jsonObject.getString("t"))) {
