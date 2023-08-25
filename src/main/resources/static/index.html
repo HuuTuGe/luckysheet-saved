@@ -51,6 +51,9 @@
             }
             var autoSave;
             var fullscreen = false;
+            var oldValue;
+            var newValue;
+            var infoTips;
             //配置项
             var options = {
                 lang: 'zh',
@@ -101,9 +104,28 @@
                         }
 
                     },
-                    cellUpdated: function() {
-
-
+                       cellUpdated:function(r,c,oldobj,newobj)
+                    {
+                      if(oldobj==null)
+                      {
+                         oldValue="null"
+                      }
+                      else
+                      {
+                        oldValue=JSON.parse(JSON.stringify(oldobj)).v
+                      }
+                       if(newobj==null)
+                      {
+                         newValue="null"
+                      }
+                      else
+                      {
+                        newValue=JSON.parse(JSON.stringify(newobj)).v
+                      }
+                      infoTips="将"+r+"行"+c+"列的"+oldValue+"改为"+newValue;
+                      console.log(infoTips);
+                    },
+                    Updated: function() {
                         //监听更新,并在3s后自动保存
                         if (autoSave) clearTimeout(autoSave)
                         $(luckysheet_info_detail_save).text("已修改")
@@ -219,13 +241,17 @@
                 "http://" + location.host + "/goBack",
                 {
                     id: printwords,
-                    name:thisName
+                    name:thisName,
+                    info:infoTips
                 },
             )
             //点击回退后强制hide重新打开刷新历史记录版本
             $('[data-toggle="popover"]').popover('hide');
             window.luckysheet.destroy();
             var sleep=setTimeout(function() {
+                var oldValue;
+                var newValue;
+                var infoTips;
                 var options = {
                     lang: 'zh',
                     container: 'luckysheet',
@@ -274,6 +300,27 @@
                             }
 
                         },
+                        cellUpdated:function(r,c,oldobj,newobj)
+                        {
+                          if(oldobj==null)
+                          {
+                             oldValue="null"
+                          }
+                          else
+                          {
+                            oldValue=JSON.parse(JSON.stringify(oldobj)).v
+                          }
+                           if(newobj==null)
+                          {
+                             newValue="null"
+                          }
+                          else
+                          {
+                            newValue=JSON.parse(JSON.stringify(newobj)).v
+                          }
+                          infoTips="将"+r+"行"+c+"列的"+oldValue+"改为"+newValue;
+                          console.log(infoTips);
+                        },
                         updated: function (e) {
                             //监听更新,并在3s后自动保存
                             var autoSave;
@@ -287,7 +334,8 @@
                                     "http://" + location.host + "/set",
                                     {
                                         jsonExcel: JSON.stringify(excel),
-                                        name: thisName
+                                        name: thisName,
+                                        info:infoTips
                                     },
                                     function () {
                                         $(luckysheet_info_detail_save).text("已保存")
