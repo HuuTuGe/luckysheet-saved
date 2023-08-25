@@ -12,17 +12,18 @@ import java.util.List;
 
 @Component
 public class RecordDAO {
-    public boolean record(String doc, String name, Date date) throws SQLException {
+    public boolean record(String doc, String name, Date date,String info) throws SQLException {
         Connection connection = DBUtils.getConnection();
         Statement statement = connection.createStatement();
         java.sql.Timestamp d = new java.sql.Timestamp(date.getTime());
         System.out.println(date);
         System.out.println(d);
-        String sql = "insert into record (doc,name,time) values (?,?,?)";
+        String sql = "insert into record (doc,name,time,info) values (?,?,?,?)";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
         preparedStatement.setString(1, doc);
         preparedStatement.setString(2, name);
         preparedStatement.setTimestamp(3, d);
+        preparedStatement.setString(4, info);
         preparedStatement.executeUpdate();
         connection.close();
         statement.close();
@@ -43,8 +44,9 @@ public class RecordDAO {
             String doc = rs.getString("doc");
             String name = rs.getString("name");
             Date date = rs.getTimestamp("time");
+            String info = rs.getString("info");
             System.out.println(date);
-            Record record = new Record(id, doc, name, date);
+            Record record = new Record(id, doc, name, date,info);
             list.add(record);
         }
         rs.close();

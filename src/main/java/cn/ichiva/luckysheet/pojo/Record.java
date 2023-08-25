@@ -19,4 +19,6 @@ public class Record implements Serializable {
 
     Date time;
 
+    String info;
+
 }

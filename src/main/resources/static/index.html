@@ -24,6 +24,7 @@
         var thisId;
         var thisName;
         var count = 0;
+        var infoTips;
         function checkLeaving() {
             window.luckysheet.exitEditMode();
             window.luckysheet.refresh();
@@ -53,7 +54,6 @@
             var fullscreen = false;
             var oldValue;
             var newValue;
-            var infoTips;
             //配置项
             var options = {
                 lang: 'zh',
@@ -104,28 +104,22 @@
                         }
 
                     },
-                       cellUpdated:function(r,c,oldobj,newobj)
-                    {
-                      if(oldobj==null)
-                      {
-                         oldValue="null"
-                      }
-                      else
-                      {
-                        oldValue=JSON.parse(JSON.stringify(oldobj)).v
-                      }
-                       if(newobj==null)
-                      {
-                         newValue="null"
-                      }
-                      else
-                      {
-                        newValue=JSON.parse(JSON.stringify(newobj)).v
-                      }
-                      infoTips="将"+r+"行"+c+"列的"+oldValue+"改为"+newValue;
-                      console.log(infoTips);
-                    },
-                    Updated: function() {
+                    cellUpdated: function(r, c, oldobj, newobj) {
+                        if (oldobj == null) {
+                            oldValue = "null"
+                        }
+                        else {
+                            oldValue = JSON.parse(JSON.stringify(oldobj)).v
+                        }
+                        if (newobj == null) {
+                            newValue = "null"
+                        }
+                        else {
+                            newValue = JSON.parse(JSON.stringify(newobj)).v
+                        }
+                        infoTips = "将" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
+                        console.log(infoTips);
+
                         //监听更新,并在3s后自动保存
                         if (autoSave) clearTimeout(autoSave)
                         $(luckysheet_info_detail_save).text("已修改")
@@ -137,7 +131,8 @@
                                 "http://" + location.host + "/set",
                                 {
                                     jsonExcel: JSON.stringify(excel),
-                                    name: thisName
+                                    name: thisName,
+                                    info: infoTips
                                 },
                                 function() {
                                     $(luckysheet_info_detail_save).text("已保存")
@@ -211,14 +206,14 @@
             $.ajax({
                 type: "GET",
                 url: "http://" + location.host + "/viewRecord",
-                async:false,
+                async: false,
                 success: function(data) {
                     jQuery.each(data, function(i, item) {
                         html += "<tr>";
-                        html += ("<td>" + item.id  + "</td>")
+                        html += ("<td>" + item.id + "</td>")
                         html += ("<td>" + item.time + "</td>")
                         html += ("<td>" + item.name + "</td>")
-                        html += ("<td>" + item.doc + "</td>")
+                        html += ("<td>" + item.info + "</td>")
                         html += ("<td><span class=\"d-inline-block\" tabindex=\"0\" data-toggle=\"tooltip\" title=\"一旦点击，不可撤销\"><button onclick=\"backward(this)\" class=\"btn btn-primary\" id=\"return_button" + i + "\">回退</button></span></td>")
                         html += "</tr>";
                     });
@@ -240,15 +235,15 @@
             $.post(
                 "http://" + location.host + "/goBack",
                 {
-                    id:printwords,
-                    name:thisName,
-                    info:infoTips
+                    id: printwords,
+                    name: thisName,
+                    info: infoTips
                 },
             )
             //点击回退后强制hide重新打开刷新历史记录版本
             $('[data-toggle="popover"]').popover('hide');
             window.luckysheet.destroy();
-            var sleep=setTimeout(function() {
+            var sleep = setTimeout(function() {
                 var oldValue;
                 var newValue;
                 var infoTips;
@@ -264,7 +259,7 @@
                         //lockMark 是否正在被占用
                         //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
                         //sheetMark 该格子是哪个工作表的锁对应工作表的
-                        cellEditBefore: function (op) {
+                        cellEditBefore: function(op) {
                             var row_small = op[0].row[0];
                             var column_small = op[0].column[0];
                             var sheetMark = luckysheet.getSheet().order;
@@ -286,7 +281,7 @@
 
                         },
                         //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
-                        cellUpdateBefore: function (op1, op2) {
+                        cellUpdateBefore: function(op1, op2) {
                             var sheetMark = luckysheet.getSheet().order;
                             var lockMark_2 = 'locking[' + sheetMark + '][' + op1 + '][' + op2 + ']';
                             var nameMark_2 = 'name[' + sheetMark + '][' + op1 + '][' + op2 + ']';
@@ -300,33 +295,28 @@
                             }
 
                         },
-                        cellUpdated:function(r,c,oldobj,newobj)
-                        {
-                          if(oldobj==null)
-                          {
-                             oldValue="null"
-                          }
-                          else
-                          {
-                            oldValue=JSON.parse(JSON.stringify(oldobj)).v
-                          }
-                           if(newobj==null)
-                          {
-                             newValue="null"
-                          }
-                          else
-                          {
-                            newValue=JSON.parse(JSON.stringify(newobj)).v
-                          }
-                          infoTips="将"+r+"行"+c+"列的"+oldValue+"改为"+newValue;
-                          console.log(infoTips);
+                        cellUpdated: function(r, c, oldobj, newobj) {
+                            if (oldobj == null) {
+                                oldValue = "null"
+                            }
+                            else {
+                                oldValue = JSON.parse(JSON.stringify(oldobj)).v
+                            }
+                            if (newobj == null) {
+                                newValue = "null"
+                            }
+                            else {
+                                newValue = JSON.parse(JSON.stringify(newobj)).v
+                            }
+                            infoTips = "将" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
+                            console.log(infoTips);
                         },
-                        updated: function (e) {
+                        updated: function(e) {
                             //监听更新,并在3s后自动保存
                             var autoSave;
                             if (autoSave) clearTimeout(autoSave)
                             $(luckysheet_info_detail_save).text("已修改")
-                            autoSave = setTimeout(function () {
+                            autoSave = setTimeout(function() {
                                 var excel = luckysheet.getAllSheets();
                                 //去除临时数据,减小体积
                                 for (var i in excel) excel[i].data = undefined
@@ -335,9 +325,9 @@
                                     {
                                         jsonExcel: JSON.stringify(excel),
                                         name: thisName,
-                                        info:infoTips
+                                        info: infoTips
                                     },
-                                    function () {
+                                    function() {
                                         $(luckysheet_info_detail_save).text("已保存")
                                     })
                             }, 3 * 1000)
@@ -348,7 +338,7 @@
                 }
                 luckysheet.create(options);
                 console.log('destroy');
-            },500)
+            }, 500)
         }
 
     </script>

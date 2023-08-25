@@ -65,9 +65,9 @@ public class LuckySheetController {
 
     //设置文件
     @PostMapping("/set")
-    public Object set(@RequestParam(value = "jsonExcel") String jsonExcel,@RequestParam(value = "name") String name) throws IOException {
+    public Object set(@RequestParam(value = "jsonExcel") String jsonExcel,@RequestParam(value = "name") String name,@RequestParam(value = "info") String info) throws IOException {
         doc = jsonExcel;
-        return recordService.record(doc,name);
+        return recordService.record(doc,name,info);
     }
 
     //查看历史记录
@@ -86,10 +86,10 @@ public class LuckySheetController {
 
     //版本回溯
     @RequestMapping("/goBack")
-    public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name) {
+    public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name,@RequestParam(value = "info") String info) {
 
         doc=recordService.goBack(id);
-        recordService.record(doc,name);
+        recordService.record(doc,name,info);
         System.out.println(doc);
         return true;
     }

@@ -22,10 +22,10 @@ public class RecordService {
         return list;
     }
 
-    public boolean record(String doc,String name) {
+    public boolean record(String doc,String name,String info) {
         Date date = new Date();
         try {
-            recordDAO.record(doc, name, date);
+            recordDAO.record(doc, name, date, info);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
