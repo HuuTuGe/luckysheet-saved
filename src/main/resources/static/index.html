@@ -118,7 +118,7 @@
                         else {
                             newValue = JSON.parse(JSON.stringify(newobj)).v
                         }
-                        infoTips = "将" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
+                        infoTips = "将表" +luckysheet.getSheet().name+"的第"+ r + "行" + c + "列的" + oldValue + "改为" + newValue;
                         console.log(infoTips);
 
                         //监听更新,并在3s后自动保存
