@@ -33,17 +33,22 @@ public class LuckySheetWebSocketServer {
 
     @OnOpen
     public void onOpen(Session conn, @PathParam("name") String name) throws IOException {
+
         this.name = name;
-        connMap.put(conn, name);
-        log.info("{} 加入,在线人数 = {}", name, connMap.size());
         myId=++id%100000;
+        if(myId%2==1){
+            connMap.put(conn, name);
+            log.info("{} 加入,在线人数 = {}", name, connMap.size());
+        }
         conn.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(1,Integer.toString(myId),name,null)));
     }
 
     @OnClose
     public void onClose(Session conn) {
-        String name = connMap.remove(conn);
-        log.info("{} 离开", name);
+        if(myId%2==1) {
+            String name = connMap.remove(conn);
+            log.info("{} 离开", name);
+        }
     }
 
     @OnMessage
