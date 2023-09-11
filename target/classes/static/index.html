@@ -31,8 +31,16 @@
         }
         $(function() {
             var name = "";
-            while (name.length == 0) {
-                name = prompt("请输入昵称")
+            if (sessionStorage.getItem('name') == null) {
+                while (name.length == 0) {
+                    name = prompt("请输入昵称")
+                    if (name.length != 0) {
+                        sessionStorage.setItem('name', name);
+                    }
+                }
+            }
+            else {
+                name = sessionStorage.getItem('name')
             }
             let socket;
             if (typeof (WebSocket) == "undefined") {
@@ -46,6 +54,7 @@
                         jsonObject = JSON.parse(resp.data);
                         thisId = jsonObject.id;
                         thisName = jsonObject.username;
+                        console.log(thisId)
                         count++;
                     }
                 };
@@ -86,7 +95,6 @@
                             //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
                             //备用 localStorage.clear();
                         }
-
                     },
                     //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
                     cellUpdateBefore: function(op1, op2) {
@@ -117,7 +125,7 @@
                         else {
                             newValue = JSON.parse(JSON.stringify(newobj)).v
                         }
-                        infoTips = "将" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
+                        infoTips = "将表" + luckysheet.getSheet().name + "的第" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
                         console.log(infoTips);
 
                         //监听更新,并在3s后自动保存
@@ -241,106 +249,8 @@
                 },
             )
             //点击回退后强制hide重新打开刷新历史记录版本
-          $('[data-toggle="popover"]').popover('hide');
-            window.luckysheet.destroy();
-            var sleep = setTimeout(function() {
-                var oldValue;
-                var newValue;
-                var infoTips;
-                var options = {
-                    lang: 'zh',
-                    container: 'luckysheet',
-                    allowUpdate: true,
-                    showinfobar: true,//作用：是否显示顶部信息栏
-                    loadUrl: "http://" + location.host + "/get",
-                    updateUrl: "ws://" + location.hostname + ":11551/" + thisName,
-                    functionButton: '<button id="fullScreen" class="btn btn-primary" onclick="fullScreen()" style="padding:3px 6px;font-size: 12px;display:block;margin-right: 10px;">全屏</button> <button id="closeFullScreen" class="btn btn-primary" onclick="closeFullScreen()" style="padding:3px 6px;font-size: 12px;display:none;margin-right: 10px;">退出全屏</button> <button id="historyView" data-toggle="popover" class="btn btn-primary"  style="padding:3px 6px;font-size: 12px;margin-right: 10px;">历史记录</button> ',
-                    hook: {
-                        //lockMark 是否正在被占用
-                        //nameMark 占用该格的用户名id是什么 存了先开后开的问题不大
-                        //sheetMark 该格子是哪个工作表的锁对应工作表的
-                        cellEditBefore: function(op) {
-                            var row_small = op[0].row[0];
-                            var column_small = op[0].column[0];
-                            var sheetMark = luckysheet.getSheet().order;
-                            var lockMark_1 = 'locking[' + sheetMark + '][' + row_small + '][' + column_small + ']';
-                            var nameMark_1 = 'name[' + sheetMark + '][' + row_small + '][' + column_small + ']';
-                            console.log('editbefore');
-                            console.log(thisName);
-                            if (localStorage.getItem(lockMark_1) == 'true') {
-                                alert('being occupied')
-                                //api强制中途退出
-                                setTimeout('window.luckysheet.exitEditMode()', 1);
-                            } else {
-                                //该用户选中单元格的上下界,考虑到共享编辑的可能是合并的单元格，但是只需要考虑左上角的，所以用locking三维数组存在localStorage来判断是否锁住了
-                                localStorage.setItem(lockMark_1, true);
-                                localStorage.setItem(nameMark_1, thisId);
-                                //清理一下空间，存在编辑到一半关闭localStorage因为没有完整走完进程不清空的问题
-                                //备用 localStorage.clear();
-                            }
-
-                        },
-                        //cellUpdateBefore回车时候没有修改内容和有修改内容都有,cellUpdated只有修改过内容才出现，所以采用cellUpdatedBefore来保证无论是否修改了内容都有这一步骤remove localStorage
-                        cellUpdateBefore: function(op1, op2) {
-                            var sheetMark = luckysheet.getSheet().order;
-                            var lockMark_2 = 'locking[' + sheetMark + '][' + op1 + '][' + op2 + ']';
-                            var nameMark_2 = 'name[' + sheetMark + '][' + op1 + '][' + op2 + ']';
-
-                            console.log('updatebefore');
-                            if (thisId == localStorage.getItem(nameMark_2)) {
-                                localStorage.removeItem(lockMark_2);
-                                localStorage.removeItem(nameMark_2);
-                            } else {
-                                return false;
-                            }
-
-                        },
-                        cellUpdated: function(r, c, oldobj, newobj) {
-                            if (oldobj == null) {
-                                oldValue = "null"
-                            }
-                            else {
-                                oldValue = JSON.parse(JSON.stringify(oldobj)).v
-                            }
-                            if (newobj == null) {
-                                newValue = "null"
-                            }
-                            else {
-                                newValue = JSON.parse(JSON.stringify(newobj)).v
-                            }
-                            infoTips = "将" + r + "行" + c + "列的" + oldValue + "改为" + newValue;
-                            console.log(infoTips);
-                        },
-                        updated: function(e) {
-                            //监听更新,并在3s后自动保存
-                            var autoSave;
-                            if (autoSave) clearTimeout(autoSave)
-                            $(luckysheet_info_detail_save).text("已修改")
-                            autoSave = setTimeout(function() {
-                                var excel = luckysheet.getAllSheets();
-                                //去除临时数据,减小体积
-                                for (var i in excel) excel[i].data = undefined
-                                $.post(
-                                    "http://" + location.host + "/set",
-                                    {
-                                        jsonExcel: JSON.stringify(excel),
-                                        name: thisName,
-                                        info: infoTips
-                                    },
-                                    function() {
-                                        $(luckysheet_info_detail_save).text("已保存")
-                                    })
-                            }, 3 * 1000)
-
-                            return true;
-                        }
-                    },
-                }
-                luckysheet.create(options);
-                console.log('destroy');
-            }, 500)
+            window.location.reload();
         }
-
     </script>
 </body>
 
