@@ -11,7 +11,7 @@ together with Lin Jinkun
 - 历史编辑记录
 - 版本回退
 - more to discover。。。
-  (不包含.sql)
+  (不包含.sql，格式见sql格式.png请自行在navicat里建立record表)
 # 正在开发
 - 修正页面刷新按钮卡死问题
 
