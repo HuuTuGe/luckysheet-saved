@@ -45,7 +45,6 @@ public class RecordDAO {
             String name = rs.getString("name");
             Date date = rs.getTimestamp("time");
             String info = rs.getString("info");
-            System.out.println(date);
             Record record = new Record(id, doc, name, date,info);
             list.add(record);
         }

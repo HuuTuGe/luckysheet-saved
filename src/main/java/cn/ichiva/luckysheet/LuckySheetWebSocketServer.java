@@ -25,25 +25,45 @@ public class LuckySheetWebSocketServer {
     //存储连接及昵称
     static final Map<Session, String> connMap = new ConcurrentHashMap<>();
 
-    static int id=-1;
+    static int id = -1;
 
     private String name;
 
     private int myId;
 
+    private static Map<Integer, ResponseDTO> responseDTOMap = new ConcurrentHashMap<>();
+
     @OnOpen
     public void onOpen(Session conn, @PathParam("name") String name) throws IOException {
+
         this.name = name;
-        connMap.put(conn, name);
-        log.info("{} 加入,在线人数 = {}", name, connMap.size());
-        myId=++id%100000;
-        conn.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(1,Integer.toString(myId),name,null)));
+        myId = ++id % 100000;
+        if (myId % 2 == 1) {
+            connMap.put(conn, name);
+            log.info("{} 加入,在线人数 = {}", name, connMap.size());
+        }
+        conn.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(1, Integer.toString(myId), name, null)));
+        getAllUser(conn);
+    }
+
+    private void getAllUser(Session conn) {
+        responseDTOMap.forEach((integer, responseDTO) -> {
+            try {
+                conn.getBasicRemote().sendText(JSON.toJSONString(responseDTO));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     @OnClose
     public void onClose(Session conn) {
-        String name = connMap.remove(conn);
-        log.info("{} 离开", name);
+        if (myId % 2 == 1) {
+            String name = connMap.remove(conn);
+            log.info("{} 离开", name);
+        }
+        if (responseDTOMap.containsKey(myId))
+            responseDTOMap.remove(myId);
     }
 
     @OnMessage
@@ -57,6 +77,16 @@ public class LuckySheetWebSocketServer {
                 if (log.isTraceEnabled()) log.trace(unMessage);
 
                 JSONObject jsonObject = JSON.parseObject(unMessage);
+
+                if ("mv".equals(jsonObject.getString("t"))) {
+                    if (responseDTOMap.containsKey(myId))
+                        responseDTOMap.replace(myId, new ResponseDTO(3, Integer.toString(myId), name, unMessage));
+                    else responseDTOMap.put(myId, new ResponseDTO(3, Integer.toString(myId), name, unMessage));
+                } else if (!"shs".equals(jsonObject.getString("t"))) {
+                    if (responseDTOMap.containsKey(myId))
+                        responseDTOMap.replace(myId, new ResponseDTO(2, Integer.toString(myId), name, unMessage));
+                    else responseDTOMap.put(myId, new ResponseDTO(2, Integer.toString(myId), name, unMessage));
+                }
                 //广播
                 connMap.forEach((socket, n) -> {
                     //排除自己
@@ -67,7 +97,7 @@ public class LuckySheetWebSocketServer {
                         if ("mv".equals(jsonObject.getString("t"))) {
                             socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(3, Integer.toString(myId), name, unMessage)));
                         } else if (!"shs".equals(jsonObject.getString("t"))) {
-                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(2, Integer.toString(myId) , name, unMessage)));
+                            socket.getBasicRemote().sendText(JSON.toJSONString(new ResponseDTO(2, Integer.toString(myId), name, unMessage)));
                         }
                     } catch (IOException e) {
                         e.printStackTrace();

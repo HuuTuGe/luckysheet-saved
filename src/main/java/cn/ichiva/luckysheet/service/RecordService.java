@@ -16,14 +16,20 @@ public class RecordService {
     @Autowired
     RecordDAO recordDAO;
 
+    List<Record> list = null;
+
     public List<Record> viewRecord() throws SQLException {
-        List<Record> list=new ArrayList<>();
-        list=recordDAO.getRecords();
+        if (list == null) {
+            list = new ArrayList<>();
+            System.out.println("查一下数据库");
+            list = recordDAO.getRecords();
+        }
         return list;
     }
 
-    public boolean record(String doc,String name,String info) {
+    public boolean record(String doc, String name, String info) {
         Date date = new Date();
+        list.add(new Record(list.size() + 1, doc, name, date, info));
         try {
             recordDAO.record(doc, name, date, info);
         } catch (SQLException e) {

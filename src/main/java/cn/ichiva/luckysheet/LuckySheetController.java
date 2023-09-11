@@ -80,15 +80,12 @@ public class LuckySheetController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-//        Gson gson=new Gson();
-//        String str= gson.toJson(list);
         return list;
     }
 
     //版本回溯
     @RequestMapping("/goBack")
     public boolean goBack(@RequestParam(value = "id") int id,@RequestParam(value = "name") String name) {
-
         doc=recordService.goBack(id);
         String info="回退到版本"+id;
         recordService.record(doc,name,info);
